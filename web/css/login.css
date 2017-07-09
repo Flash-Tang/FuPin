@@ -1,0 +1,42 @@
+@charset "utf-8";
+/*
+ * Project: lyFuPin 扶贫-登录页
+ * Description: Private CSS;
+ * Author: Tong
+ * Version: 2017-2-20;
+ */
+
+/******登录页 20170219******/
+.bgWhite { background:#fff;}
+.wrapperLogin { width:100%; padding:10px 0; overflow:auto;}
+.loginTitle { width:1200px; margin:0 auto 5px; overflow:hidden;}
+.mainBgOne { width:100%; height:355px; overflow:hidden;}
+.mainBgTwo { width:100%; height:355px; background:url(../images/bg1.jpg) no-repeat left center; background-size:auto 355px !important; overflow:hidden;}
+.main{ position:relative; width:1200px; height:355px; margin:-355px auto 0; overflow:hidden;}
+.loginBg { position:absolute; width:290px; height:330px; top:10px; right:0; background:#fff; filter:alpha(opacity=30); /*ie透明度90%*/ -webkit-opacity:0.3; -moz-opacity:0.3; /*Moz + FF 透明度90%*/ opacity:0.3; /*支持CSS3的浏览器(FF1.5也支持)透明度90%*/ overflow:hidden;}
+.login { position:absolute; width:230px; height:270px; top:24px; right:15px; padding:15px; background:#fff; overflow:hidden;}
+.loginTop { width:100%; height:18px; line-height:16px; color:#666; font-size:16px; font-weight:bold; margin-bottom:10px; overflow:hidden;}
+.loginInput { position:relative; width:100%; margin-bottom:15px; overflow:hidden;}
+.loginInput input { width:168px; height:40px; line-height:40px !important; padding:0 20px 0 40px; font-size:16px; color:#666; border:1px solid #ddd;}
+.loginInpImg { position:absolute; width:25px; height:25px; left:10px; top:10px;}
+.loginCode { background:url(../images/login3.png) no-repeat 10px center !important; background-size:20px auto; background-color: transparent;}
+.codeImg { position:absolute; top:7px; right:5px; width:62px; height:26px; line-height:26px; border-left:1px solid #ddd; padding-left:6px;}
+.codeImg img{  vertical-align:middle;}
+.loginPswd { width:100%; height:20px; line-height:20px; margin-top:5px; font-size:14px; color:#0d8ec5; overflow:hidden;}
+.loginPswd div { color:#0d8ec5;}
+.loginBtn { width:100%; height:40px; line-height:40px; margin-top:15px; text-align:center; color:#fff; font-size:16px; background:#ff4400; border-radius:5px; cursor:pointer; overflow:hidden;}
+.loginBottom { width:1200px; margin:10px auto 0; overflow:hidden;}
+.notice { float:left; width:28%; padding:0 1%; margin-right:5%; overflow:hidden;}
+.notice:last-child { margin:0;}
+.noticeTitle { width:100%; height:28px; font-size:18px; line-height:28px; overflow:hidden;}
+.noticeTitle img { vertical-align:bottom;}
+.notice .colRed { color:#F60;}
+.notice .colBlue { color:#5487dd;}
+.notice .colGreen { color:#28b577;}
+.noticeList { width:100%; padding:5px 0; overflow:hidden;}
+.noticeList ul { display:flex; width:100%; height:24px; line-height:24px; color:#666; font-size:14px; overflow:hidden;}
+.noticeList ul li:first-child { float:left; flex:1; padding:0 20px 0 8px; background:url(../images/squre.png) no-repeat left center; background-size:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.noticeList ul li:last-child { float:right;}
+.bottomLine { width:100%; margin-top:10px; border-bottom:1px dashed #ddd; overflow:hidden;}
+.copyRight { width:1200px; margin:0 auto; overflow:hidden;}
+.copyRight .left { width:100%; padding:10px 0; line-height:24px; color:#777; font-size:14px; text-align:center; overflow:hidden;}

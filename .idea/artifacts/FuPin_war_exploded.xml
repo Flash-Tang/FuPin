@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="FuPin:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/FuPin_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="FuPin/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="FuPin" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Struts 2-2.3.20.1" />
+          <element id="file-copy" path="C:/apache-tomcat-8.5.16/lib/mysql-connector-java-5.1.42-bin.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,211 @@
+@charset "utf-8";
+/* CSS Document */
+.tongyou_xbi{ height:36px; line-height:36px; color:#666; font-family:"微软雅黑"; }
+
+
+ul,ol,li{list-style: outside none none;}
+.clearfix{ display:block;}
+.clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
+.clearfix:after{clear:both;}
+.Font_wryh{ font-family:"微软雅黑"; color:#666;}
+.H_36{ height:36px; line-height:36px;}
+.H_30{ height:30px; line-height:30px;}
+.W_1000{width:1000px; margin:10px auto; font-family:"微软雅黑";}
+.H_1000{ min-height:1000px;}
+
+/*-----------------------------------div高度-------------------------------------------------- */
+.H_80{ height:80px;}
+.H_260{ height:260px;}
+.H_300{ height:300px;}
+.H_315{ height:315px;}
+.H_360{ height:360px;}
+
+/*-----------------------------------div宽度-------------------------------------------------- */
+.w_325{ width:325px;}
+.w_326{ width:326px;}
+.w_285{ width:285px;}
+.w_493{ width:493px;}
+
+/*-----------------------------------通用标题+more--------------------------------------------- */
+.T_biti{width: 100%;height: 40px;line-height: 40px; background: url(../images/tong_yun/04_ht.png) no-repeat 18px 8px;font-family: "微软雅黑";text-indent:36px;border-bottom: 1px solid #DCDCDC;}
+.T_biti span{color: #1bb6b8; font-size: 16px; float:left; font-family: "微软雅黑";}
+.T_biti_more{width: 60px;height: 40px;background: url(../images/tong_yun/da_more.png) no-repeat center;float:right; margin-right:20px;}
+
+/*-----------------------------------左图+左内容--------------------------------------------- */
+.T_img_left{ width:110px; height:80px; float:left;}
+.T_text_right{width: 165px;height:80px;font-family: "微软雅黑"; margin-left:10px; overflow:hidden; float:left;}
+.T_text_right h4{font-weight: bold; font-size:13px;line-height: 26px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;font-family: "微软雅黑";}
+.T_text_right p{ font-size:12px; color:#666; line-height:18px;}
+
+/*-----------------------------------通用li发布文档------------------------------------------- */
+.T_text_li{ font-size:12px; font-family:"微软雅黑"; color:#666;}
+.T_text_li ul{ overflow: hidden; margin:0px; padding:0px;}
+.T_text_li li{ line-height:26px; background:url(../images/tong_yun/04_xd.png) no-repeat center left; text-indent:16px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+
+/*-----------------------------------楼层-------------------------------------------------- */
+.F_1dc{ border:1px solid #dcdcdc;}
+.F_lc{height: 30px; margin-top: 10px;border-bottom: 2px solid #1bb6b8;}
+.F_lc span{float: right;line-height: 30px;font-size: 12px;}
+.F_lc h4{font-size: 18px;font-weight: bold;color: #1bb6b8;line-height: 30px;}
+.F_lc em{padding-right: 20px;}
+.Kuang_jia{border: 1px solid #dcdcdc; border-top: none;}
+.Kuang_jia_left{float: left;width:292px;padding:20px;border-right: 1px solid #dcdcdc;}
+.NO_border{border: none !important;}
+
+
+/*-----------------------------------按钮-------------------------------------------------- */
+.tong_but{text-align: center; padding:3px;background: #1bb6b8 none repeat scroll 0% 0%;border: medium none;color: #FFF;font-family: "微软雅黑";font-size: 14px;cursor: pointer;border-radius: 5px;position: relative;z-index: 2;margin: 0 auto;}
+.tong_b_80{ width:60px;}
+.tong_b_292{ width:292px;}
+
+
+
+
+.FL{float:left;}
+.FR{float:right;}
+.f12{ font-size:12px;}
+.f14{font-size: 14px;}
+.1dc{ border:1px solid #dcdcdc;}
+.tong_c{ color:#666;}
+.f16{ font-size: 16px;}
+.FBB{ color:#1bb6b8;}
+.FBF{ color:#FF6600;}
+
+.0A_auto{ margin:0 auto;}
+
+
+.MT5{ margin-top:5px;}
+.MT10{ margin-top:10px;}
+.MT15{ margin-top:15px;}
+.MT17{ margin-top:17px;}
+.MT20{ margin-top:20px;}
+.MT25{ margin-top:25px;}
+.MT30{ margin-top:30px;}
+.MT35{ margin-top:35px;}
+.MT40{ margin-top:40px;}
+.MT50{ margin-top:50px;}
+.MT60{ margin-top:60px;}
+.MT70{ margin-top:70px;}
+.MT80{ margin-top:80px;}
+
+
+.ML5{margin-left:5px;}
+.ML10{margin-left:10px;}
+.ML15{margin-left:15px;}
+.ML20{margin-left:20px;}
+.ML25{margin-left:25px;}
+.ML30{margin-left:30px;}
+.ML35{margin-left:30px;}
+.ML40{margin-left:40px;}
+.ML50{margin-left:50px;}
+.ML60{margin-left:60px;}
+.ML70{margin-left:70px;}
+.ML80{margin-left:80px;}
+.ML90{margin-left:90px;}
+.ML100{margin-left:100px;}
+
+
+.MR5{margin-right:5px;}
+.MR10{margin-right:10px;}
+.MR15{margin-right:15px;}
+.MR20{margin-right:20px;}
+.MR25{margin-right:25px;}
+.MR30{margin-right:30px;}
+.MR35{margin-right:30px;}
+.MR40{margin-right:40px;}
+.MR50{margin-right:50px;}
+.MR60{margin-right:60px;}
+.MR70{margin-right:70px;}
+.MR80{margin-right:80px;}
+
+
+.MB5{margin-bottom:5px;}
+.MB10{margin-bottom:10px;}
+.MB15{margin-bottom:15px;}
+.MB20{margin-bottom:20px;}
+.MB25{margin-bottom:25px;}
+.MB30{margin-bottom:30px;}
+.MB35{margin-bottom:30px;}
+.MB40{margin-bottom:40px;}
+.MB50{margin-bottom:50px;}
+.MB60{margin-bottom:60px;}
+.MB70{margin-bottom:70px;}
+.MB80{margin-bottom:80px;}
+
+.P10{ padding:10px;}
+.p15{ padding:15px;}
+.P20{ padding:20px;}
+.P25{ padding:25px;}
+.P30{ padding:30px;}
+
+.M10{ margin:10px auto;}
+.M15{ margin:15px auto;}
+.M20{ margin:20px auto;}
+.M25{ margin:25px auto;}
+.M30{ margin:30px auto;}
+
+
+
+
+.PT5{padding-top:5px;}
+.PT10{padding-top:10px;}
+.PT15{padding-top:15px;}
+.PT20{padding-top:20px;}
+.PT25{padding-top:25px;}
+.PT30{padding-top:30px;}
+.PT35{padding-top:35px;}
+.PT40{padding-top:40px;}
+.PT50{padding-top:50px;}
+.PT60{padding-top:60px;}
+.PT70{padding-top:70px;}
+.PT80{padding-top:80px;}
+
+
+.PL5{padding-left:5px;}
+.PL10{padding-left:10px;}
+.PL15{padding-left:15px;}
+.PL20{padding-left:20px;}
+.PL25{padding-left:25px;}
+.PL30{padding-left:30px;}
+.PL35{padding-left:30px;}
+.PL40{padding-left:40px;}
+.PL50{padding-left:50px;}
+.PL60{padding-left:60px;}
+.PL70{padding-left:70px;}
+.PL80{padding-left:80px;}
+
+
+.PR5{padding-right:5px;}
+.PR10{padding-right:10px;}
+.PR15{padding-right:15px;}
+.PR20{padding-right:20px;}
+.PR25{padding-right:25px;}
+.PR30{padding-right:30px;}
+.PR35{padding-right:30px;}
+.PR40{padding-right:40px;}
+.PR50{padding-right:50px;}
+.PR60{padding-right:60px;}
+.PR70{padding-right:70px;}
+.PR80{padding-right:80px;}
+
+
+.PB5{padding-bottom:5px;}
+.PB10{padding-bottom:10px;}
+.PB15{padding-bottom:15px;}
+.PB20{padding-bottom:20px;}
+.PB25{padding-bottom:25px;}
+.PB30{padding-bottom:30px;}
+.PB35{padding-bottom:30px;}
+.PB40{padding-bottom:40px;}
+.PB50{padding-bottom:50px;}
+.PB60{padding-bottom:60px;}
+.PB70{padding-bottom:70px;}
+.PB80{padding-bottom:80px;}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    font: inherit;
+    vertical-align: baseline;
+}

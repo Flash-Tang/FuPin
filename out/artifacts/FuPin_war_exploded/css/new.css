@@ -1,0 +1,34 @@
+@charset 'utf-8';
+/*Left*/
+.title { height: 58px; line-height: 58px; font-family: Microsoft YaHei; font-size: 18px; color: #333;}
+.hotservice { padding: 0 15px;}
+.hotservice .title { border-bottom: 1px solid #DCDCDC;}
+.hotservice .title h2 { display: inline; padding-bottom: 16px; border-bottom: 2px solid #1BB6B8;}
+.hotservice ul { padding: 24px 5px 8px 5px;}
+.hotservice ul li { height: 65px; margin-bottom: 15px;}
+.hotservice ul li a { display: block; overflow: hidden;}
+.hotservice ul li a .icon { float: left;}
+.hotservice ul li a p { float: left; margin-left: 12px; line-height: 65px;}
+
+/*ICON*/
+.icon, .icon img { width: 65px; height: 65px;}
+
+/*Right*/
+.subright { min-height: 625px;}
+.subright .content { padding: 0 30px 30px 30px;}
+.subright .content .title { border-bottom: 2px solid #1BB6B8;}
+/*newslist*/
+ul.newslist { margin: 25px auto; font-size: 15px; line-height: 28px;}
+ul.newslist li { overflow: hidden;}
+ul.newslist li a { float: left; display: block; max-width: 620px;  overflow: hidden;}
+ul.newslist li a, ul.lists li span { height: 30px; line-height: 30px;}
+ul.newslist li span { float: right;}
+/*article*/
+.detailHead { margin-top: 10px; padding: 20px 0; border-bottom: 1px solid #F2F2F2;}
+.detailHead .articleTit { margin-bottom: 20px; font-family: Microsoft YaHei; font-size: 20px; color: #1BB6B8;}
+.detailHead .left { float: left; color: #999;}
+.detailHead .right { float: right;}
+.detailHead .right a { margin-left: 10px; color: #1BB6B8;}
+.detailHead .right a.colred { color: #FF5952;}
+.detailContent { padding: 20px 0;}
+.detailContent p { font-size: 14px; text-indent: 2em; line-height: 30px;}
