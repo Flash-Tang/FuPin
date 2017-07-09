@@ -5,4 +5,14 @@
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
+    <package name="struts2" extends="struts-default">
+        <action name="login" class="com.action.LoginAction" method="login">
+            <result name="login">admin/admin.html</result>
+            <result name="input">login.html</result>
+        </action>
+        <action name="register" class="com.action.LoginAction" method="register">
+            <result name="success">login.html</result>
+            <result name="input">register.html</result>
+        </action>
+    </package>
 </struts>
