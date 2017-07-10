@@ -1,18 +1,43 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US">
 <head>
-    <meta charset="GBK">
-    <title>login</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Web 2.0 Login Form</title>
+
+    <!--- CSS --->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+
+    <!--- Javascript libraries (jQuery and Selectivizr) used for the custom checkbox --->
+
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/selectivizr.js"></script>
+    <noscript><link rel="stylesheet" href="css/fallback.css" /></noscript>
+    <![endif]-->
+
 </head>
+
 <body>
-<center>
-    <h1>用户登录</h1>
-    <form action="userlogin.action" method="post">
-        用户名：<input type="text" name="username"></br>
-        密码：<input type="password" name="pwd"></br>
-        <input type="submit" value="提交"></br>
+<div id="container">
+    <form  action="userlogin.action" method="post">
+        <div class="login">鐧婚檰</div>
+        <div class="username-text">鐢ㄦ埛鍚嶏細</div>
+        <div class="password-text">瀵嗙爜:</div>
+        <div class="username-field">
+            <input type="text" name="username" value="" />
+        </div>
+        <div class="password-field">
+            <input type="password" name="pwd" value="" />
+        </div>
+        <input type="checkbox" name="remember-me" id="remember-me" /><label for="remember-me">璁颁綇瀵嗙爜</label>
+        <div class="forgot-usr-pwd">&nbsp&nbsp &nbsp &nbsp &nbsp<a href="userregister.html">娉ㄥ唽</a></div>
+        <input type="submit" name="submit" value="鐧婚檰" />
     </form>
-    <a href="userregister.html">注册</a>
-</center>
+</div>
+
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript'
+                                  charset='gb2312'></script></div>
 </body>
 </html>

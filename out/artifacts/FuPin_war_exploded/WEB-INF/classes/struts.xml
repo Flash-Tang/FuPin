@@ -7,20 +7,21 @@
 <struts>
     <package name="struts2" extends="struts-default">
         <action name="adminlogin" class="com.action.LoginAction" method="adminlogin">
-            <result name="login">admin/admin.html</result>
+            <result name="login">admin/admin.jsp</result>
             <result name="input">adminlogin.html</result>
         </action>
+        <action name="adminregister" class="com.action.LoginAction" method="adminregister">
+            <result name="success">adminlogin.html</result>
+            <result name="input">adminregister.html</result>
+        </action>
         <action name="userlogin" class="com.action.LoginAction" method="userlogin">
-            <result name="login">user/user.html</result>
+            <result name="login">user/user.jsp</result>
             <result name="input">userlogin.html</result>
         </action>
         <action name="userregister" class="com.action.LoginAction" method="userregister">
             <result name="success">userlogin.html</result>
             <result name="input">userregister.html</result>
         </action>
-        <action name="adminregister" class="com.action.LoginAction" method="adminregister">
-            <result name="success">adminlogin.html</result>
-            <result name="input">adminregister.html</result>
-        </action>
+
     </package>
 </struts>
