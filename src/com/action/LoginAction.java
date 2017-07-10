@@ -10,19 +10,30 @@ public class LoginAction {
     String username;
     String pwd;
     ILoginService iLoginService = new LoginServiceImpl();
-    public String login() {
+    public String userlogin() {
         System.out.println("LoginAction");
-        if (iLoginService.isLogin(username, pwd))
+        if (iLoginService.isUserLogin(username, pwd))
             return "login";
         else return "input";
     }
-    public String register(){
+    public String userregister(){
         System.out.println("RegisterAction");
-        if(iLoginService.isRegister(username, pwd))
+        if(iLoginService.isUserRegister(username, pwd))
             return "success";
         else return "input";
     }
-
+    public String adminlogin() {
+        System.out.println("LoginAction");
+        if (iLoginService.isAdminLogin(username, pwd))
+            return "login";
+        else return "input";
+    }
+    public String adminregister(){
+        System.out.println("RegisterAction");
+        if(iLoginService.isAdminRegister(username, pwd))
+            return "success";
+        else return "input";
+    }
     public void setUsername(String username) {
         this.username = username;
     }

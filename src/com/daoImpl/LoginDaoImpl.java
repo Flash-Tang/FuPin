@@ -10,17 +10,26 @@ import java.sql.ResultSet;
  */
 public class LoginDaoImpl implements ILoginDao {
     DBUtil db = new DBUtil();
-    public boolean isLogin(String username, String pwd){
+    public boolean isUserLogin(String username, String pwd){
         System.out.println("do daoImpl");
         String sql = "select * from account where account='"+username+"' and password='"+pwd+"'";
         try {
             ResultSet rs = db.queryData(sql);
             if(rs.next())
-            {
                 return true;
-            }
-            else
-                return false;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean isUserRegister(String username, String pwd) {
+        System.out.println("do daoImpl");
+        String sql = "insert into account(account, password) values('"+username+"','"+pwd+"')";
+        try {
+            if(db.Update(sql))
+                return true;
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -28,14 +37,28 @@ public class LoginDaoImpl implements ILoginDao {
     }
 
     @Override
-    public boolean isRegister(String username, String pwd) {
+    public boolean isAdminLogin(String username, String pwd) {
         System.out.println("do daoImpl");
-        String sql = "insert into account(account, password) values('"+username+"','"+pwd+"')";
+        String sql = "select * from admin where username='" + username + "' and password='" + pwd + "'";
+        try {
+            ResultSet rs = db.queryData(sql);
+            if (rs.next())
+                return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    @Override
+    public boolean isAdminRegister(String username, String pwd) {
+        System.out.println("do daoImpl");
+        String sql = "insert into admin(username, password) values('"+username+"','"+pwd+"')";
         try {
             if(db.Update(sql))
                 return true;
 
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return false;

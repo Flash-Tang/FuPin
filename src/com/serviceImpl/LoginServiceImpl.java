@@ -9,14 +9,26 @@ import com.service.ILoginService;
  */
 public class LoginServiceImpl implements ILoginService {
     ILoginDao iLoginDao = new LoginDaoImpl();
-    public boolean isLogin(String username, String pwd) {
+    public boolean isUserLogin(String username, String pwd) {
         System.out.println("do serviceimpl");
-        return iLoginDao.isLogin(username, pwd);
+        return iLoginDao.isUserLogin(username, pwd);
     }
 
     @Override
-    public boolean isRegister(String username, String pwd) {
+    public boolean isUserRegister(String username, String pwd) {
         System.out.println("do serviceiml");
-        return iLoginDao.isRegister(username, pwd);
+        return iLoginDao.isUserRegister(username, pwd);
+    }
+
+    public boolean isAdminLogin(String username, String pwd) {
+        System.out.println("do serviceimpl");
+        return iLoginDao.isAdminLogin(username, pwd);
+
+    }
+
+    @Override
+    public boolean isAdminRegister(String username, String pwd) {
+        System.out.println("do serviceiml");
+        return iLoginDao.isAdminRegister(username, pwd);
     }
 }
