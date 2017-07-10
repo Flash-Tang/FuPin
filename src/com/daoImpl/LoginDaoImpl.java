@@ -12,7 +12,7 @@ public class LoginDaoImpl implements ILoginDao {
     DBUtil db = new DBUtil();
     public boolean isUserLogin(String username, String pwd){
         System.out.println("do daoImpl");
-        String sql = "select * from account where account='"+username+"' and password='"+pwd+"'";
+        String sql = "select * from useraccount where username='"+username+"' and userpwd='"+pwd+"'";
         try {
             ResultSet rs = db.queryData(sql);
             if(rs.next())
@@ -25,7 +25,7 @@ public class LoginDaoImpl implements ILoginDao {
 
     public boolean isUserRegister(String username, String pwd) {
         System.out.println("do daoImpl");
-        String sql = "insert into account(account, password) values('"+username+"','"+pwd+"')";
+        String sql = "insert into useraccount(username, userpwd) values('"+username+"','"+pwd+"')";
         try {
             if(db.Update(sql))
                 return true;
@@ -39,7 +39,7 @@ public class LoginDaoImpl implements ILoginDao {
     @Override
     public boolean isAdminLogin(String username, String pwd) {
         System.out.println("do daoImpl");
-        String sql = "select * from admin where username='" + username + "' and password='" + pwd + "'";
+        String sql = "select * from adminaccount where adminname='" + username + "' and adminpwd='" + pwd + "'";
         try {
             ResultSet rs = db.queryData(sql);
             if (rs.next())
@@ -53,7 +53,7 @@ public class LoginDaoImpl implements ILoginDao {
     @Override
     public boolean isAdminRegister(String username, String pwd) {
         System.out.println("do daoImpl");
-        String sql = "insert into admin(username, password) values('"+username+"','"+pwd+"')";
+        String sql = "insert into adminaccount(adminname, adminpwd) values('"+username+"','"+pwd+"')";
         try {
             if(db.Update(sql))
                 return true;
