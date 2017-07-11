@@ -28,7 +28,7 @@
             <result name="success"></result>
         </action>
         <action name="apply" class="com.action.ApplyAction" method="SubmitApply">
-            <result name="input">user/userapply.jsp</result>
+            <result name="input">/user/userapply.jsp</result>
             <result name="success">user/user.jsp</result>
         </action>
     </package>

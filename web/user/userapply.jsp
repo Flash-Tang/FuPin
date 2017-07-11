@@ -5,23 +5,23 @@
   Time: 17:07
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=gbk" language="java" %>
+<%@ page contentType="text/html;charset=utf-8" language="java" %>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
-    <meta name="description" content="æ´◊º∑ˆ∆∂–≈œ¢ªØπ‹¿Ì∆ΩÃ®" />
-    <title>æ´◊º∑ˆ∆∂–≈œ¢ªØπ‹¿Ì∆ΩÃ®</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Á≤æÂáÜÊâ∂Ë¥´‰ø°ÊÅØÂåñÁÆ°ÁêÜÂπ≥Âè∞" />
+    <title>Á≤æÂáÜÊâ∂Ë¥´‰ø°ÊÅØÂåñÁÆ°ÁêÜÂπ≥Âè∞</title>
     <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/user/css/css.css" />
 </head>
 <body>
 <div class="header">
     <div class="top"><a href="<%=request.getContextPath()%>/user/user.jsp"><img class="logo" src="<%=request.getContextPath()%>/user/images/logo.jpg" /></a>
         <ul class="nav">
-            <li><a href="<%=request.getContextPath()%>/user/userinfo.jsp">∏ˆ»À–≈œ¢</a></li>
-            <li class="seleli"><a href="<%=request.getContextPath()%>/user/userapply.jsp">…Í«Î∞Ô∑ˆ</a></li>
-            <li><a href="<%=request.getContextPath()%>/user/usertrack.jsp">∞Ô∑ˆ◊∑◊Ÿ</a></li>
-            <li><a href="<%=request.getContextPath()%>/user/userfeedback.jsp">∑¥¿°–≈œ¢</a></li>
-            <li><a href="<%=request.getContextPath()%>/index.jsp">∑µªÿ ◊“≥</a></li>
+            <li><a href="<%=request.getContextPath()%>/user/userinfo.jsp">‰∏™‰∫∫‰ø°ÊÅØ</a></li>
+            <li class="seleli"><a href="<%=request.getContextPath()%>/user/userapply.jsp">Áî≥ËØ∑Â∏ÆÊâ∂</a></li>
+            <li><a href="<%=request.getContextPath()%>/user/usertrack.jsp">Â∏ÆÊâ∂ËøΩË∏™</a></li>
+            <li><a href="<%=request.getContextPath()%>/user/userfeedback.jsp">ÂèçÈ¶à‰ø°ÊÅØ</a></li>
+            <li><a href="<%=request.getContextPath()%>/index.jsp">ËøîÂõûÈ¶ñÈ°µ</a></li>
         </ul>
     </div>
 </div>
@@ -29,19 +29,19 @@
     <div class="leftbar">
         <div class="lm01"> <img class="peptx" src="<%=request.getContextPath()%>/user/images/user.png" />
             <div class="pepdet">
-                <p class="pepname">ª∂”≠ªÿ¿¥£¨∆’Õ®”√ªß</p>
+                <p class="pepname">Ê¨¢ËøéÂõûÊù•ÔºåÊôÆÈÄöÁî®Êà∑</p>
             </div>
             <div class="clear"></div>
         </div>
         <div class="lm02">
             <div class="title"><img class="icon" src="<%=request.getContextPath()%>/user/images/dataicon.jpg" />
-                <h2>»’¿˙</h2>
+                <h2>Êó•ÂéÜ</h2>
             </div>
             <div class="detail"> <img class="" src="<%=request.getContextPath()%>/user/images/kj_01.jpg" /> </div>
         </div>
         <div class="lm03">
             <div class="title"><img style="padding-right:5px;" class="icon" src="<%=request.getContextPath()%>/user/images/weaicon.jpg" />
-                <h2>ÃÏ∆¯</h2>
+                <h2>Â§©Ê∞î</h2>
             </div>
             <div class="detail"> <img class="" src="<%=request.getContextPath()%>/user/images/kj_02.jpg" /> </div>
         </div>
@@ -50,252 +50,252 @@
     <div class="mainbody">
         <div class="currmenu">
             <ul class="rig_nav">
-                <li class="rig_seleli"><a href="#">µ±«∞</a><span> x </span></li>
-                <li><a href="#">…Í«Î∞Ô∑ˆ</a></li>
+                <li class="rig_seleli"><a href="#">ÂΩìÂâç</a><span> x </span></li>
+                <li><a href="#">Áî≥ËØ∑Â∏ÆÊâ∂</a></li>
             </ul>
         </div>
         <div class="myconment" id="loader"style="width: 80%;">
 
             <div class="container">
-                <div class="public-nav">ƒ˙µ±«∞µƒŒª÷√£∫<a href="">ª˘±æ–≈œ¢ÃÌº”</a></div>
+                <div class="public-nav">ÊÇ®ÂΩìÂâçÁöÑ‰ΩçÁΩÆÔºö<a href="">Âü∫Êú¨‰ø°ÊÅØÊ∑ªÂä†</a></div>
                 <div class="public-content">
                     <div class="public-content-header">
-                        <h3>∆∂¿ßªßª˘±æ–≈œ¢±Ì</h3>
+                        <h3>Ë¥´Âõ∞Êà∑Âü∫Êú¨‰ø°ÊÅØË°®</h3>
                     </div>
                     <div class="public-content-cont">
                         <form action="apply" method="post">
                             <div class="form-group">
-                                <label for="">”√ªß’À∫≈</label>
+                                <label for="">Áî®Êà∑Ë¥¶Âè∑</label>
                                 <input class="form-input-txt" type="text" name="user.username" value="" />
                             </div>
 
                             <div class="form-group">
-                                <label for="">–’√˚</label>
-                                <input class="form-input-txt" type="text" name="apply.name" value="" />
+                                <label for="">ÂßìÂêç</label>
+                                <input class="form-input-txt" type="text" name="applys.name" value="" />
                             </div>
 
                             <div class="form-group">
-                                <label for="">–‘±</label>
+                                <label for="">ÊÄßÂà´</label>
                                 <p>
                                     <label>
-                                        <input type="radio" name="apply.sex" value="ƒ–" id="RadioGroup1_0">
-                                        ƒ–</label>
+                                        <input type="radio" name="applys.sex" value="Áî∑" id="RadioGroup1_0">
+                                        Áî∑</label>
                                     <label>
-                                        <input type="radio" name="apply.sex" value="≈Æ" id="RadioGroup1_1">
-                                        ≈Æ</label>
+                                        <input type="radio" name="applys.sex" value="Â•≥" id="RadioGroup1_1">
+                                        Â•≥</label>
 
                                 </p>
                             </div>
 
                             <div class="form-group">
-                                <label for="">√Ò◊Â</label>
-                                <input class="form-input-txt" type="text" name="apply.nation" value="" />
+                                <label for="">Ê∞ëÊóè</label>
+                                <input class="form-input-txt" type="text" name="applys.nation" value="" />
                             </div>
 
                             <div class="form-group">
-                                <label for="">¡™œµ∑Ω Ω</label>
-                                <input class="form-input-txt" type="text" name="apply.action" value="" />
+                                <label for="">ËÅîÁ≥ªÊñπÂºè</label>
+                                <input class="form-input-txt" type="text" name="applys.telephone" value="" />
                             </div>
 
                             <div class="form-group">
-                                <label for="">…Ì∑›÷§∫≈</label>
-                                <input class="form-input-txt" type="text" name="apply.idCardNum" value="" />
+                                <label for="">Ë∫´‰ªΩËØÅÂè∑</label>
+                                <input class="form-input-txt" type="text" name="applys.idCardNum" value="" />
                             </div>
 
                             <div class="form-group">
-                                <label for="">≤–º≤◊¥øˆ</label>
-                                <select name="apply.disability" class="form-select">
-                                    <option value="Œﬁ≤–º≤">Œﬁ≤–º≤</option>
-                                    <option value="«·Œ¢≤–º≤">«·Œ¢≤–º≤</option>
-                                    <option value="÷ÿ∂»≤–º≤">÷ÿ∂»≤–º≤</option>
+                                <label for="">ÊÆãÁñæÁä∂ÂÜµ</label>
+                                <select name="applys.disability" class="form-select">
+                                    <option value="Êó†ÊÆãÁñæ">Êó†ÊÆãÁñæ</option>
+                                    <option value="ËΩªÂæÆÊÆãÁñæ">ËΩªÂæÆÊÆãÁñæ</option>
+                                    <option value="ÈáçÂ∫¶ÊÆãÁñæ">ÈáçÂ∫¶ÊÆãÁñæ</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="">≤–º≤÷¢±‡∫≈</label>
-                                <input class="form-input-txt" type="text" name="apply.disabCardNum" value="" />
+                                <label for="">ÊÆãÁñæÁóáÁºñÂè∑</label>
+                                <input class="form-input-txt" type="text" name="applys.disabCardNum" value="" />
                             </div>
                             <div class="form-group">
-                                <label for="">º“Õ•»À ˝</label>
-                                <select name="apply.famMemNum" class="form-select">
-                                    <option value="1">“ª»À</option>
-                                    <option value="2">¡Ω»À</option>
-                                    <option value="3">»˝»À</option>
-                                    <option value="4">Àƒ»À</option>
-                                    <option value="5">ŒÂ»À</option>
-                                    <option value="6">¡˘»À</option>
-                                    <option value="7">∆ﬂ»À</option>
-                                    <option value="8">∞À»À</option>
-                                    <option value="9">æ≈»À</option>
-                                    <option value="10"> Æ»Àº∞“‘…œ</option>
+                                <label for="">ÂÆ∂Â∫≠‰∫∫Êï∞</label>
+                                <select name="applys.famMemNum" class="form-select">
+                                    <option value="1">‰∏Ä‰∫∫</option>
+                                    <option value="2">‰∏§‰∫∫</option>
+                                    <option value="3">‰∏â‰∫∫</option>
+                                    <option value="4">Âõõ‰∫∫</option>
+                                    <option value="5">‰∫î‰∫∫</option>
+                                    <option value="6">ÂÖ≠‰∫∫</option>
+                                    <option value="7">‰∏É‰∫∫</option>
+                                    <option value="8">ÂÖ´‰∫∫</option>
+                                    <option value="9">‰πù‰∫∫</option>
+                                    <option value="10">ÂçÅ‰∫∫Âèä‰ª•‰∏ä</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="">ªßºÆÀ˘‘⁄µÿ</label>
-                                <input class="form-input-txt" type="text" name="apply.placeOfDemicile" value="" />
+                                <label for="">Êà∑Á±çÊâÄÂú®Âú∞</label>
+                                <input class="form-input-txt" type="text" name="applys.placeOfDemicile" value="" />
                             </div>
 
                             <div class="form-group">
-                                <label for="">º“Õ•»Àæ˘ ’»Î</label>
-                                <input class="form-input-txt" type="text" name="apply.perIncome" value="" />
+                                <label for="">ÂÆ∂Â∫≠‰∫∫ÂùáÊî∂ÂÖ•</label>
+                                <input class="form-input-txt" type="text" name="applys.perIncome" value="" />
                             </div>
                             <div class="form-group">
-                                <label for=""> ‹ΩÃ”˝≥Ã∂»</label>
-                                <select name="apply.education" class="form-select">
-                                    <option value="Œ¥ ‹ΩÃ”˝">Œ¥ ‹ΩÃ”˝</option>
-                                    <option value="–°—ß">–°—ß</option>
-                                    <option value="≥ı÷–">≥ı÷–</option>
-                                    <option value="∏ﬂ÷–">∏ﬂ÷–</option>
-                                    <option value="±æø∆º∞“‘…œ">±æø∆º∞“‘…œ</option>
+                                <label for="">ÂèóÊïôËÇ≤Á®ãÂ∫¶</label>
+                                <select name="applys.education" class="form-select">
+                                    <option value="Êú™ÂèóÊïôËÇ≤">Êú™ÂèóÊïôËÇ≤</option>
+                                    <option value="Â∞èÂ≠¶">Â∞èÂ≠¶</option>
+                                    <option value="Âàù‰∏≠">Âàù‰∏≠</option>
+                                    <option value="È´ò‰∏≠">È´ò‰∏≠</option>
+                                    <option value="Êú¨ÁßëÂèä‰ª•‰∏ä">Êú¨ÁßëÂèä‰ª•‰∏ä</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="">ªÈ“ˆ◊¥øˆ</label>
+                                <label for="">Â©öÂßªÁä∂ÂÜµ</label>
                                 <p>
                                     <label>
-                                        <input type="radio" name="apply.marriage" value="“—ªÈ" id="RadioGroup1_0">
-                                        “—ªÈ</label>
+                                        <input type="radio" name="applys.marriage" value="Â∑≤Â©ö" id="RadioGroup1_0">
+                                        Â∑≤Â©ö</label>
                                     <label>
-                                        <input type="radio" name="apply.marriage" value="Œ¥ªÈ" id="RadioGroup1_1">
-                                        Œ¥ªÈ</label>
+                                        <input type="radio" name="applys.marriage" value="Êú™Â©ö" id="RadioGroup1_1">
+                                        Êú™Â©ö</label>
 
                                 </p>
                             </div>
 
                             <div class="form-group">
-                                <label for="">º“Õ•◊°÷∑</label>
-                                <input class="form-input-txt" type="text" name="apply.address" value="" />
+                                <label for="">ÂÆ∂Â∫≠‰ΩèÂùÄ</label>
+                                <input class="form-input-txt" type="text" name="applys.address" value="" />
                             </div>
 <%--
                             --------------
                             <div class="form-group">
-                                <label for="">…Áª·±£œ’</label>
+                                <label for="">Á§æ‰ºö‰øùÈô©</label>
                                 <p>
                                     <label >
-                                        <input  type="radio" name="demand.socialSecurity" value="”–" id="RadioGroup1_0">
-                                        ”–</label>
+                                        <input  type="radio" name="demand.socialSecurity" value="Êúâ" id="RadioGroup1_0">
+                                        Êúâ</label>
                                     <label>
-                                        <input type="radio" name="demand.socialSecurity" value="Œﬁ" id="RadioGroup1_1">
-                                        Œﬁ</label>
+                                        <input type="radio" name="demand.socialSecurity" value="Êó†" id="RadioGroup1_1">
+                                        Êó†</label>
 
                                 </p>
                             </div>
                             ------------------------
                             <div class="form-group">
-                                <label for="">…Áª·æ»÷˙∏£¿˚≤πÃ˘</label>
+                                <label for="">Á§æ‰ºöÊïëÂä©Á¶èÂà©Ë°•Ë¥¥</label>
                                 <p>
                                     <label >
-                                        <input  type="radio" name="demand.socialAssistance" value="–Ë“™" id="RadioGroup1_0">
-                                        –Ë“™</label>
+                                        <input  type="radio" name="demand.socialAssistance" value="ÈúÄË¶Å" id="RadioGroup1_0">
+                                        ÈúÄË¶Å</label>
                                     <label>
-                                        <input type="radio" name="demand.socialAssistance" value="≤ª–Ë“™" id="RadioGroup1_1">
-                                        ≤ª–Ë“™</label>
+                                        <input type="radio" name="demand.socialAssistance" value="‰∏çÈúÄË¶Å" id="RadioGroup1_1">
+                                        ‰∏çÈúÄË¶Å</label>
 
                                 </p>
                             </div>
                             ------------------------
                             <div class="form-group">
-                                <label for="">Õ–—¯∑˛ŒÒ</label>
+                                <label for="">ÊâòÂÖªÊúçÂä°</label>
                                 <label >
-                                    <input  type="radio" name="demand.fosterService" value="–Ë“™" id="RadioGroup1_0">
-                                    –Ë“™</label>
+                                    <input  type="radio" name="demand.fosterService" value="ÈúÄË¶Å" id="RadioGroup1_0">
+                                    ÈúÄË¶Å</label>
                                 <label>
-                                    <input type="radio" name="demand.fosterService" value="≤ª–Ë“™" id="RadioGroup1_1">
-                                    ≤ª–Ë“™</label>
+                                    <input type="radio" name="demand.fosterService" value="‰∏çÈúÄË¶Å" id="RadioGroup1_1">
+                                    ‰∏çÈúÄË¶Å</label>
 
                             </div>
                             ------------------------
                             <div class="form-group">
-                                <label for="">øµ∏¥</label>
+                                <label for="">Â∫∑Â§ç</label>
 
                                 <label >
-                                    <input  type="radio" name="demand.rehabilitation" value="–Ë“™" id="RadioGroup1_0">
-                                    –Ë“™</label>
+                                    <input  type="radio" name="demand.rehabilitation" value="ÈúÄË¶Å" id="RadioGroup1_0">
+                                    ÈúÄË¶Å</label>
                                 <label>
-                                    <input type="radio" name="demand.rehabilitation" value="≤ª–Ë“™" id="RadioGroup1_1">
-                                    ≤ª–Ë“™</label>
+                                    <input type="radio" name="demand.rehabilitation" value="‰∏çÈúÄË¶Å" id="RadioGroup1_1">
+                                    ‰∏çÈúÄË¶Å</label>
                             </div>
                             ------------------------
                             <div class="form-group">
-                                <label for="">Œﬁ’œ∞≠∏ƒ‘Ï</label>
+                                <label for="">Êó†ÈöúÁ¢çÊîπÈÄ†</label>
                                 <p>
                                     <label >
-                                        <input  type="radio" name="demand.disabReconst" value="–Ë“™" id="RadioGroup1_0">
-                                        –Ë“™</label>
+                                        <input  type="radio" name="demand.disabReconst" value="ÈúÄË¶Å" id="RadioGroup1_0">
+                                        ÈúÄË¶Å</label>
                                     <label>
-                                        <input type="radio" name="demand.disabReconst" value="≤ª–Ë“™" id="RadioGroup1_1">
-                                        ≤ª–Ë“™</label>
+                                        <input type="radio" name="demand.disabReconst" value="‰∏çÈúÄË¶Å" id="RadioGroup1_1">
+                                        ‰∏çÈúÄË¶Å</label>
 
                                 </p>
                             </div>
                             ------------------------
                             <div class="form-group">
-                                <label for="">ΩÃ”˝ŒƒªØÃÂ”˝</label>
+                                <label for="">ÊïôËÇ≤ÊñáÂåñ‰ΩìËÇ≤</label>
                                 <p>
                                     <label >
-                                        <input  type="radio" name="demand.education" value="–Ë“™" id="RadioGroup1_0">
-                                        –Ë“™</label>
+                                        <input  type="radio" name="demand.education" value="ÈúÄË¶Å" id="RadioGroup1_0">
+                                        ÈúÄË¶Å</label>
                                     <label>
-                                        <input type="radio" name="demand.education" value="≤ª–Ë“™" id="RadioGroup1_1">
-                                        ≤ª–Ë“™</label>
+                                        <input type="radio" name="demand.education" value="‰∏çÈúÄË¶Å" id="RadioGroup1_1">
+                                        ‰∏çÈúÄË¶Å</label>
 
                                 </p>
                             </div>
                             ------------------------
                             <div class="form-group">
-                                <label for="">æÕ“µ</label>
+                                <label for="">Â∞±‰∏ö</label>
                                 <p>
                                     <label >
-                                        <input  type="radio" name="demand.job" value="–Ë“™" id="RadioGroup1_0">
-                                        –Ë“™</label>
+                                        <input  type="radio" name="demand.job" value="ÈúÄË¶Å" id="RadioGroup1_0">
+                                        ÈúÄË¶Å</label>
                                     <label>
-                                        <input type="radio" name="demand.job" value="≤ª–Ë“™" id="RadioGroup1_1">
-                                        ≤ª–Ë“™</label>
+                                        <input type="radio" name="demand.job" value="‰∏çÈúÄË¶Å" id="RadioGroup1_1">
+                                        ‰∏çÈúÄË¶Å</label>
 
                                 </p>
                             </div>
                             ------------------------
                             <div class="form-group">
-                                <label for="">∑ˆ∆∂</label>
+                                <label for="">Êâ∂Ë¥´</label>
                                 <p>
                                     <label >
-                                        <input  type="radio" name="demand.privation" value="–Ë“™" id="RadioGroup1_0">
-                                        –Ë“™</label>
+                                        <input  type="radio" name="demand.privation" value="ÈúÄË¶Å" id="RadioGroup1_0">
+                                        ÈúÄË¶Å</label>
                                     <label>
-                                        <input type="radio" name="demand.privation" value="≤ª–Ë“™" id="RadioGroup1_1">
-                                        ≤ª–Ë“™</label>
+                                        <input type="radio" name="demand.privation" value="‰∏çÈúÄË¶Å" id="RadioGroup1_1">
+                                        ‰∏çÈúÄË¶Å</label>
 
                                 </p>
                             </div>
                             ------------------------
                             <div class="form-group">
-                                <label for="">Œ¨»®</label>
+                                <label for="">Áª¥ÊùÉ</label>
                                 <p>
                                     <label >
-                                        <input  type="radio" name="demand.legalRight" value="–Ë“™" id="RadioGroup1_0">
-                                        –Ë“™</label>
+                                        <input  type="radio" name="demand.legalRight" value="ÈúÄË¶Å" id="RadioGroup1_0">
+                                        ÈúÄË¶Å</label>
                                     <label>
-                                        <input type="radio" name="demand.legalRight" value="≤ª–Ë“™" id="RadioGroup1_1">
-                                        ≤ª–Ë“™</label>
+                                        <input type="radio" name="demand.legalRight" value="‰∏çÈúÄË¶Å" id="RadioGroup1_1">
+                                        ‰∏çÈúÄË¶Å</label>
 
                                 </p>
                             </div>
                             ------------------------
                             <div class="form-group">
-                                <label for="">∏ƒ…∆ª˘±æ…˙ªÓÃıº˛</label>
+                                <label for="">ÊîπÂñÑÂü∫Êú¨ÁîüÊ¥ªÊù°‰ª∂</label>
                                 <p>
                                     <label >
-                                        <input  type="radio" name="demand.improlivCondition" value="–Ë“™" id="RadioGroup1_0">
-                                        –Ë“™</label>
+                                        <input  type="radio" name="demand.improlivCondition" value="ÈúÄË¶Å" id="RadioGroup1_0">
+                                        ÈúÄË¶Å</label>
                                     <label>
-                                        <input type="radio" name="demand.improlivCondition" value="≤ª–Ë“™" id="RadioGroup1_1">
-                                        ≤ª–Ë“™</label>
+                                        <input type="radio" name="demand.improlivCondition" value="‰∏çÈúÄË¶Å" id="RadioGroup1_1">
+                                        ‰∏çÈúÄË¶Å</label>
 
                                 </p>
                             </div>
 --%>
                             <div class="form-group" style="margin-left:250px;">
-                                <input type="submit" class="sub-btn" value="Ã·  Ωª" />
-                                <input type="reset" class="sub-btn" value="÷ÿ  ÷√" />
+                                <input type="submit" class="sub-btn" value="Êèê  ‰∫§" />
+                                <input type="reset" class="sub-btn" value="Èáç  ÁΩÆ" />
                             </div>
                         </form>
                     </div>

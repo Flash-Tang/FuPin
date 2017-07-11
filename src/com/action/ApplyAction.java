@@ -9,22 +9,24 @@ import com.serviceImpl.UserServiceImpl;
  * Created by panxi on 2017/7/10.
  */
 public class ApplyAction {
-    public void setApply(Apply apply) {
-        this.apply = apply;
-        this.apply.userid = user.getIdByName();
+
+    Apply applys;
+    Demand demand = new Demand();
+    User user;
+    IUserService iUserService = new UserServiceImpl();
+
+    public Apply getApplys() {
+        return applys;
+    }
+
+    public void setApplys(Apply applys) {
+        this.applys = applys;
     }
 
     public void setUser(User user) {
         this.user = user;
     }
 
-    public void setDemand(Demand demand) {
-        this.demand = demand;
-    }
-    Apply apply;
-    Demand demand;
-    User user;
-    IUserService iUserService = new UserServiceImpl();
     public String isApply(){
         //1.未申请
         if(true)
@@ -38,9 +40,12 @@ public class ApplyAction {
         System.out.println("SubmitApply");
         System.out.println("username:"+ user.getUsername());
         System.out.println("userid:"+ user.getIdByName());
-        System.out.println("apply:"+ apply);
-        if(iUserService.userApply(apply) && iUserService.userDemand(demand))
-        return "success";
-        else return "input";
+        applys.userid = user.getIdByName();
+        demand.userid =applys.userid;
+        System.out.println("apply:"+ applys.toString());
+        if(iUserService.userApply(applys) && iUserService.userDemand(demand))
+            return "success";
+        else
+            return "input";
     }
 }
