@@ -52,7 +52,6 @@ public class DBUtil {
         {
             conn=getConnection();
             stm=conn.createStatement();
-            stm.execute("SET names 'gbk'");
             rs=stm.executeQuery(sql);
         }catch(SQLException e)
         {
@@ -67,7 +66,6 @@ public class DBUtil {
         try {
             conn=getConnection();
             stm=conn.createStatement();
-            stm.execute("SET names 'gbk'");
             a=stm.executeUpdate(sql);
         } catch (SQLException e) {
 

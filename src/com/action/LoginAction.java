@@ -11,13 +11,19 @@ import com.serviceImpl.LoginServiceImpl;
 public class LoginAction {
     Admin admin;
     User user;
+    ILoginService iLoginService = new LoginServiceImpl();
     public void setAdmin(Admin admin) {
         this.admin = admin;
+    }
+    public Admin getAdmin() {
+        return admin;
     }
     public void setUser(User user) {
         this.user = user;
     }
-    ILoginService iLoginService = new LoginServiceImpl();
+    public User getUser() {
+        return user;
+    }
     public String userlogin() {
         System.out.println("LoginAction");
         if (iLoginService.isUserLogin(user.username, user.userpwd))

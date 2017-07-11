@@ -2,88 +2,23 @@ package com.model;
 
 public class Demand {
 	public int userid;
-	public String socialSecurity;
-	public String socialAssistance;
-	public String fosterService;
-	public String rehabilitation;
-	public String disabReconst;
-	public String education;
-	public String job;
-	public String privation;
-	public String legalRight;
-	public String improlivCondition;
-	public int getUserid() {
-		return userid;
-	}
-	public void setUserid(int userid) {
-		this.userid = userid;
-	}
-	public String getSocialSecurity() {
-		return socialSecurity;
-	}
-	public void setSocialSecurity(String socialSecurity) {
-		this.socialSecurity = socialSecurity;
-	}
-	public String getSocialAssistance() {
-		return socialAssistance;
-	}
-	public void setSocialAssistance(String socialAssistance) {
-		this.socialAssistance = socialAssistance;
-	}
-	public String getFosterService() {
-		return fosterService;
-	}
-	public void setFosterService(String fosterService) {
-		this.fosterService = fosterService;
-	}
-	public String getRehabilitation() {
-		return rehabilitation;
-	}
-	public void setRehabilitation(String rehabilitation) {
-		this.rehabilitation = rehabilitation;
-	}
-	public String getDisabReconst() {
-		return disabReconst;
-	}
-	public void setDisabReconst(String disabReconst) {
-		this.disabReconst = disabReconst;
-	}
-	public String getEducation() {
-		return education;
-	}
-	public void setEducation(String education) {
-		this.education = education;
-	}
-	public String getJob() {
-		return job;
-	}
-	public void setJob(String job) {
-		this.job = job;
-	}
-	public String getPrivation() {
-		return privation;
-	}
-	public void setPrivation(String privation) {
-		this.privation = privation;
-	}
-	public String getLegalRight() {
-		return legalRight;
-	}
-	public void setLegalRight(String legalRight) {
-		this.legalRight = legalRight;
-	}
-	public String getImprolivCondition() {
-		return improlivCondition;
-	}
-	public void setImprolivCondition(String improlivCondition) {
-		this.improlivCondition = improlivCondition;
-	}
+	public int socialSecurity;
+	public int socialAssistance;
+	public int fosterService;
+	public int rehabilitation;
+	public int disabReconst;
+	public int education;
+	public int job;
+	public int privation;
+	public int legalRight;
+	public int improlivCondition;
+	
 	public Demand(){
 		
 	}
-	public Demand(int userid, String socialSecurity, String socialAssistance, String fosterService,
-			String rehabilitation, String disabReconst, String education, String job, String privation,
-			String legalRight, String improlivCondition) {
+
+	public Demand(int userid, int socialSecurity, int socialAssistance, int fosterService, int rehabilitation,
+			int disabReconst, int education, int job, int privation, int legalRight, int improlivCondition) {
 		super();
 		this.userid = userid;
 		this.socialSecurity = socialSecurity;
@@ -97,5 +32,94 @@ public class Demand {
 		this.legalRight = legalRight;
 		this.improlivCondition = improlivCondition;
 	}
+
+	public int getUserid() {
+		return userid;
+	}
+
+	public void setUserid(int userid) {
+		this.userid = userid;
+	}
+
+	public int getSocialSecurity() {
+		return socialSecurity;
+	}
+
+	public void setSocialSecurity(int socialSecurity) {
+		this.socialSecurity = socialSecurity;
+	}
+
+	public int getSocialAssistance() {
+		return socialAssistance;
+	}
+
+	public void setSocialAssistance(int socialAssistance) {
+		this.socialAssistance = socialAssistance;
+	}
+
+	public int getFosterService() {
+		return fosterService;
+	}
+
+	public void setFosterService(int fosterService) {
+		this.fosterService = fosterService;
+	}
+
+	public int getRehabilitation() {
+		return rehabilitation;
+	}
+
+	public void setRehabilitation(int rehabilitation) {
+		this.rehabilitation = rehabilitation;
+	}
+
+	public int getDisabReconst() {
+		return disabReconst;
+	}
+
+	public void setDisabReconst(int disabReconst) {
+		this.disabReconst = disabReconst;
+	}
+
+	public int getEducation() {
+		return education;
+	}
+
+	public void setEducation(int education) {
+		this.education = education;
+	}
+
+	public int getJob() {
+		return job;
+	}
+
+	public void setJob(int job) {
+		this.job = job;
+	}
+
+	public int getPrivation() {
+		return privation;
+	}
+
+	public void setPrivation(int privation) {
+		this.privation = privation;
+	}
+
+	public int getLegalRight() {
+		return legalRight;
+	}
+
+	public void setLegalRight(int legalRight) {
+		this.legalRight = legalRight;
+	}
+
+	public int getImprolivCondition() {
+		return improlivCondition;
+	}
+
+	public void setImprolivCondition(int improlivCondition) {
+		this.improlivCondition = improlivCondition;
+	}
+	
 	
 }

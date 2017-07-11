@@ -11,9 +11,17 @@ import com.serviceImpl.UserServiceImpl;
 public class ApplyAction {
 
     Apply applys;
-    Demand demand = new Demand();
+    Demand demand;
     User user;
     IUserService iUserService = new UserServiceImpl();
+
+    public Demand getDemand() {
+        return demand;
+    }
+
+    public void setDemand(Demand demand) {
+        this.demand = demand;
+    }
 
     public Apply getApplys() {
         return applys;
@@ -38,11 +46,8 @@ public class ApplyAction {
     }
     public String SubmitApply(){
         System.out.println("SubmitApply");
-        System.out.println("username:"+ user.getUsername());
-        System.out.println("userid:"+ user.getIdByName());
         applys.userid = user.getIdByName();
         demand.userid =applys.userid;
-        System.out.println("apply:"+ applys.toString());
         if(iUserService.userApply(applys) && iUserService.userDemand(demand))
             return "success";
         else

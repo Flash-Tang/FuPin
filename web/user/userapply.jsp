@@ -78,10 +78,10 @@
                                 <label for="">性别</label>
                                 <p>
                                     <label>
-                                        <input type="radio" name="applys.sex" value="男" id="RadioGroup1_0">
+                                        <input type="radio" name="applys.sex" value="male" id="RadioGroup1_0">
                                         男</label>
                                     <label>
-                                        <input type="radio" name="applys.sex" value="女" id="RadioGroup1_1">
+                                        <input type="radio" name="applys.sex" value="female" id="RadioGroup1_1">
                                         女</label>
 
                                 </p>
@@ -116,18 +116,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">家庭人数</label>
-                                <select name="applys.famMemNum" class="form-select">
-                                    <option value="1">一人</option>
-                                    <option value="2">两人</option>
-                                    <option value="3">三人</option>
-                                    <option value="4">四人</option>
-                                    <option value="5">五人</option>
-                                    <option value="6">六人</option>
-                                    <option value="7">七人</option>
-                                    <option value="8">八人</option>
-                                    <option value="9">九人</option>
-                                    <option value="10">十人及以上</option>
-                                </select>
+                                <input type="text" name="applys.famMemNum" value=""/>
                             </div>
                             <div class="form-group">
                                 <label for="">户籍所在地</label>
@@ -165,16 +154,15 @@
                                 <label for="">家庭住址</label>
                                 <input class="form-input-txt" type="text" name="applys.address" value="" />
                             </div>
-<%--
                             --------------
                             <div class="form-group">
                                 <label for="">社会保险</label>
                                 <p>
                                     <label >
-                                        <input  type="radio" name="demand.socialSecurity" value="有" id="RadioGroup1_0">
+                                        <input  type="radio" name="demand.socialSecurity" value= "1" id="RadioGroup1_0">
                                         有</label>
                                     <label>
-                                        <input type="radio" name="demand.socialSecurity" value="无" id="RadioGroup1_1">
+                                        <input type="radio" name="demand.socialSecurity" value= "0" id="RadioGroup1_1">
                                         无</label>
 
                                 </p>
@@ -184,10 +172,10 @@
                                 <label for="">社会救助福利补贴</label>
                                 <p>
                                     <label >
-                                        <input  type="radio" name="demand.socialAssistance" value="需要" id="RadioGroup1_0">
+                                        <input  type="radio" name="demand.socialAssistance" value="1" id="RadioGroup1_0">
                                         需要</label>
                                     <label>
-                                        <input type="radio" name="demand.socialAssistance" value="不需要" id="RadioGroup1_1">
+                                        <input type="radio" name="demand.socialAssistance" value="0" id="RadioGroup1_1">
                                         不需要</label>
 
                                 </p>
@@ -196,10 +184,10 @@
                             <div class="form-group">
                                 <label for="">托养服务</label>
                                 <label >
-                                    <input  type="radio" name="demand.fosterService" value="需要" id="RadioGroup1_0">
+                                    <input  type="radio" name="demand.fosterService" value="1" id="RadioGroup1_0">
                                     需要</label>
                                 <label>
-                                    <input type="radio" name="demand.fosterService" value="不需要" id="RadioGroup1_1">
+                                    <input type="radio" name="demand.fosterService" value="0" id="RadioGroup1_1">
                                     不需要</label>
 
                             </div>
@@ -208,10 +196,10 @@
                                 <label for="">康复</label>
 
                                 <label >
-                                    <input  type="radio" name="demand.rehabilitation" value="需要" id="RadioGroup1_0">
+                                    <input  type="radio" name="demand.rehabilitation" value="1" id="RadioGroup1_0">
                                     需要</label>
                                 <label>
-                                    <input type="radio" name="demand.rehabilitation" value="不需要" id="RadioGroup1_1">
+                                    <input type="radio" name="demand.rehabilitation" value="0" id="RadioGroup1_1">
                                     不需要</label>
                             </div>
                             ------------------------
@@ -219,10 +207,10 @@
                                 <label for="">无障碍改造</label>
                                 <p>
                                     <label >
-                                        <input  type="radio" name="demand.disabReconst" value="需要" id="RadioGroup1_0">
+                                        <input  type="radio" name="demand.disabReconst" value="1" id="RadioGroup1_0">
                                         需要</label>
                                     <label>
-                                        <input type="radio" name="demand.disabReconst" value="不需要" id="RadioGroup1_1">
+                                        <input type="radio" name="demand.disabReconst" value="0" id="RadioGroup1_1">
                                         不需要</label>
 
                                 </p>
@@ -232,10 +220,10 @@
                                 <label for="">教育文化体育</label>
                                 <p>
                                     <label >
-                                        <input  type="radio" name="demand.education" value="需要" id="RadioGroup1_0">
+                                        <input  type="radio" name="demand.education" value="1" id="RadioGroup1_0">
                                         需要</label>
                                     <label>
-                                        <input type="radio" name="demand.education" value="不需要" id="RadioGroup1_1">
+                                        <input type="radio" name="demand.education" value="0" id="RadioGroup1_1">
                                         不需要</label>
 
                                 </p>
@@ -245,10 +233,10 @@
                                 <label for="">就业</label>
                                 <p>
                                     <label >
-                                        <input  type="radio" name="demand.job" value="需要" id="RadioGroup1_0">
+                                        <input  type="radio" name="demand.job" value="1" id="RadioGroup1_0">
                                         需要</label>
                                     <label>
-                                        <input type="radio" name="demand.job" value="不需要" id="RadioGroup1_1">
+                                        <input type="radio" name="demand.job" value="0" id="RadioGroup1_1">
                                         不需要</label>
 
                                 </p>
@@ -258,10 +246,10 @@
                                 <label for="">扶贫</label>
                                 <p>
                                     <label >
-                                        <input  type="radio" name="demand.privation" value="需要" id="RadioGroup1_0">
+                                        <input  type="radio" name="demand.privation" value="1" id="RadioGroup1_0">
                                         需要</label>
                                     <label>
-                                        <input type="radio" name="demand.privation" value="不需要" id="RadioGroup1_1">
+                                        <input type="radio" name="demand.privation" value="0" id="RadioGroup1_1">
                                         不需要</label>
 
                                 </p>
@@ -271,10 +259,10 @@
                                 <label for="">维权</label>
                                 <p>
                                     <label >
-                                        <input  type="radio" name="demand.legalRight" value="需要" id="RadioGroup1_0">
+                                        <input  type="radio" name="demand.legalRight" value="1" id="RadioGroup1_0">
                                         需要</label>
                                     <label>
-                                        <input type="radio" name="demand.legalRight" value="不需要" id="RadioGroup1_1">
+                                        <input type="radio" name="demand.legalRight" value="0" id="RadioGroup1_1">
                                         不需要</label>
 
                                 </p>
@@ -284,15 +272,14 @@
                                 <label for="">改善基本生活条件</label>
                                 <p>
                                     <label >
-                                        <input  type="radio" name="demand.improlivCondition" value="需要" id="RadioGroup1_0">
+                                        <input  type="radio" name="demand.improlivCondition" value="1" id="RadioGroup1_0">
                                         需要</label>
                                     <label>
-                                        <input type="radio" name="demand.improlivCondition" value="不需要" id="RadioGroup1_1">
+                                        <input type="radio" name="demand.improlivCondition" value="0" id="RadioGroup1_1">
                                         不需要</label>
 
                                 </p>
                             </div>
---%>
                             <div class="form-group" style="margin-left:250px;">
                                 <input type="submit" class="sub-btn" value="提  交" />
                                 <input type="reset" class="sub-btn" value="重  置" />

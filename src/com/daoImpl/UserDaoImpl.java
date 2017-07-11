@@ -27,7 +27,9 @@ public class UserDaoImpl implements IUserDao {
 
 	@Override
 	public boolean userApply(Apply apply) {
-		String sql = "insert into basicInfo(userid,name,sex,nation,telephone,idCardNum,disabCardNum,disability,placeOfDemicile,perIncome,education,famMemNum,marriage,address)values('" + apply.getUserid() + "','" + apply.getName() + "','" + apply.getSex() + "','" + apply.getNation() + "','" + apply.getTelephone() + "','" + apply.getIdCardNum() + "','" + apply.getDisabCardNum() + "','" + apply.getDisability() + "','" + apply.getPlaceOfDemicile() + "','" + apply.getPerIncome() + "','" + apply.getEducation() + "','" + apply.getFamMemNum() + "','" + apply.getMarriage() + "','" + apply.getAddress() + "')";
+		String sql = "insert into basicInfo(userid,name,sex,nation,telephone,idCardNum,disabCardNum,disability,placeOfDemicile" +
+				",perIncome,education,famMemNum,marriage,address)" +
+				"values('" + apply.getUserid() + "','" + apply.getName() + "','" + apply.getSex() + "','" + apply.getNation() + "','" + apply.getTelephone() + "','" + apply.getIdCardNum() + "','" + apply.getDisabCardNum() + "','" + apply.getDisability() + "','" + apply.getPlaceOfDemicile() + "','" + apply.getPerIncome() + "','" + apply.getEducation() + "','" + apply.getFamMemNum() + "','" + apply.getMarriage() + "','" + apply.getAddress() + "')";
 		try {
 			if (db.Update(sql))
 				return true;
