@@ -23,5 +23,7 @@ public interface IUserDao {
 
 	// в╥вы
 	public ResultSet getPlan(int userId);
+
+	public ResultSet getIdByName(String username);
 	
 }

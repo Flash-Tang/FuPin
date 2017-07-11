@@ -12,13 +12,14 @@ import com.util.DBUtil;
 
 public class UserDaoImpl implements IUserDao {
 	ResultSet rs;
-	DBUtil db=new DBUtil();
+	DBUtil db = new DBUtil();
+
 	@Override
 	public ResultSet getMessage(int messageId) {
-		String sql="select * from message";
+		String sql = "select * from message where massageid='" + messageId + "'";
 		try {
-			rs=db.queryData(sql);
-		} catch (ClassNotFoundException e) {
+			rs = db.queryData(sql);
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return rs;
@@ -26,10 +27,10 @@ public class UserDaoImpl implements IUserDao {
 
 	@Override
 	public boolean userApply(Apply apply) {
-		String sql="insert into basicInfo(userid,name,sex,nation,telephone,idCardNum,disabCardNum,disability,placeOfDemicile,income,education,famMemNum,marriage,address)values('"+apply.getUserId()+"','"+apply.getName()+"','"+apply.getSex()+"','"+apply.getNation()+"','"+apply.getTelephone()+"','"+apply.getIdCardNum()+"','"+apply.getDisabCardNum()+"','"+apply.getDisability()+"','"+apply.getPlaceOfDemicile()+"','"+apply.getIncome()+"','"+apply.getEducation()+"','"+apply.getFamMemNum()+"','"+apply.getMarriage()+"','"+apply.getAddress()+"')";
+		String sql = "insert into basicInfo(userid,name,sex,nation,telephone,idCardNum,disabCardNum,disability,placeOfDemicile,perIncome,education,famMemNum,marriage,address)values('" + apply.getUserid() + "','" + apply.getName() + "','" + apply.getSex() + "','" + apply.getNation() + "','" + apply.getTelephone() + "','" + apply.getIdCardNum() + "','" + apply.getDisabCardNum() + "','" + apply.getDisability() + "','" + apply.getPlaceOfDemicile() + "','" + apply.getPerIncome() + "','" + apply.getEducation() + "','" + apply.getFamMemNum() + "','" + apply.getMarriage() + "','" + apply.getAddress() + "')";
 		try {
-			if(db.Update(sql))
-				return true;	
+			if (db.Update(sql))
+				return true;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -38,10 +39,10 @@ public class UserDaoImpl implements IUserDao {
 
 	@Override
 	public boolean addfeedback(Feedback feedback) {
-		String sql="insert into feedBack(userid,words)values('"+feedback.getUserId()+"','"+feedback.getWords()+"')";
+		String sql = "insert into feedBack(userid,words)values('" + feedback.getUserid() + "','" + feedback.getWords() + "')";
 		try {
-			if(db.Update(sql))
-				return true;	
+			if (db.Update(sql))
+				return true;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -50,10 +51,10 @@ public class UserDaoImpl implements IUserDao {
 
 	@Override
 	public boolean userDemand(Demand demand) {
-		String sql="insert into demand(userid,socialSecurity,socialAssistance,fosterService,rehabilitation,disabReconst,education,job,privation,legalRight,improlivCondition)values('"+demand.getUserid()+"','"+demand.getSocialSecurity()+"','"+demand.getSocialAssistance()+"','"+demand.getFosterService()+"','"+demand.getRehabilitation()+"','"+demand.getDisabReconst()+"','"+demand.getEducation()+"','"+demand.getJob()+"','"+demand.getPrivation()+"','"+demand.getLegalRight()+"','"+demand.getImprolivCondition()+"')";
+		String sql = "insert into demand(userid,socialSecurity,socialAssistance,fosterService,rehabilitation,disabReconst,education,job,privation,legalRight,improlivCondition)values('" + demand.getUserid() + "','" + demand.getSocialSecurity() + "','" + demand.getSocialAssistance() + "','" + demand.getFosterService() + "','" + demand.getRehabilitation() + "','" + demand.getDisabReconst() + "','" + demand.getEducation() + "','" + demand.getJob() + "','" + demand.getPrivation() + "','" + demand.getLegalRight() + "','" + demand.getImprolivCondition() + "')";
 		try {
-			if(db.Update(sql))
-				return true;	
+			if (db.Update(sql))
+				return true;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -62,13 +63,24 @@ public class UserDaoImpl implements IUserDao {
 
 	@Override
 	public ResultSet getPlan(int userId) {
-		String sql="select * from plan";
+		String sql = "select * from plan where userid='" + userId + "'";
 		try {
-			rs=db.queryData(sql);
-		} catch (ClassNotFoundException e) {
+			rs = db.queryData(sql);
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return rs;
 	}
 
+	@Override
+	public ResultSet getIdByName(String username) {
+		System.out.println("do dao getIdByName");
+		String sql = "select * from useraccount where username='" + username + "'";
+		try {
+			rs = db.queryData(sql);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return rs;
+	}
 }

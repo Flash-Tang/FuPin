@@ -2,6 +2,7 @@ package com.serviceImpl;
 
 import java.sql.Date;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,13 +25,13 @@ public class UserServiceImpl implements IUserService {
 			while(rs.next())
 			{
 				//取数据库表中的每一行值
-				int massageId=rs.getInt("massageid");
-				int adminId=rs.getInt("adminid");
+				int massageid=rs.getInt("massageid");
+				int adminid=rs.getInt("adminid");
 				String text=rs.getString("text");
 				//将每一行值放入javaBeaN中
 				Message message=new Message();
-				message.setMassageId(massageId);
-				message.setAdminId(adminId);
+				message.setMassageid(massageid);
+				message.setAdminid(adminid);
 				message.setText(text);
 				//将获取的javaBean对象放入集合中
 				messageList.add(message);
@@ -71,18 +72,16 @@ public class UserServiceImpl implements IUserService {
 				float cost=rs.getFloat("cost");
 				Date startDate=rs.getDate("startDate");
 				Date endDate=rs.getDate("endDate");
-				int number=rs.getInt("number");
-				String socialSecurity=rs.getString("socialSecurity");
-				String socialAssistance=rs.getString("socialAssistance");
-				String fosterService=rs.getString("fosterService");
-				String rehabilitation=rs.getString("rehabilitation");
-				String disabReconst=rs.getString("disabReconst");
-				String education=rs.getString("education");
-				String job=rs.getString("job");
-				String privation=rs.getString("privation");
-				String legalRight=rs.getString("privation");
-				String improlivCondition=rs.getString("improlivCondition");
-				int remnum=rs.getInt("remnum");
+				int socialSecurity=rs.getInt("socialSecurity");
+				int socialAssistance=rs.getInt("socialAssistance");
+				int fosterService=rs.getInt("fosterService");
+				int rehabilitation=rs.getInt("rehabilitation");
+				int disabReconst=rs.getInt("disabReconst");
+				int education=rs.getInt("education");
+				int job=rs.getInt("job");
+				int privation=rs.getInt("privation");
+				int legalRight=rs.getInt("legalRight");
+				int improlivCondition=rs.getInt("improlivCondition");
 				//将每一行值放入javaBeaN中
 				Plan userplan=new Plan();
 				userplan.setPlanid(planid);
@@ -91,7 +90,6 @@ public class UserServiceImpl implements IUserService {
 				userplan.setCost(cost);
 				userplan.setStartDate(startDate);
 				userplan.setEndDate(endDate);
-				userplan.setNumber(number);
 				userplan.setSocialSecurity(socialSecurity);
 				userplan.setSocialAssistance(socialAssistance);
 				userplan.setFosterService(fosterService);
@@ -102,7 +100,6 @@ public class UserServiceImpl implements IUserService {
 				userplan.setPrivation(privation);
 				userplan.setLegalRight(legalRight);
 				userplan.setImprolivCondition(improlivCondition);
-				userplan.setRemnum(remnum);
 				planList.add(userplan);
 			}
 		} catch (Exception e) {
@@ -110,5 +107,19 @@ public class UserServiceImpl implements IUserService {
 		}
 		return planList;
 	}
+
+	public int getIdByName(String username) {
+		System.out.println("do service getIdByName");
+	    ResultSet rs = iUserDao.getIdByName(username);
+	    int userid = 0;
+        try {
+        	while(rs.next()){
+				userid = rs.getInt("userid");
+			}
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return userid;
+    }
 
 }

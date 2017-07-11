@@ -1,22 +1,29 @@
 package com.model;
 
 public class Feedback {
-	public int userId;
+	public int feedBackid;
+	public int userid;
 	public String words;
-	
 	public Feedback(){
 		
 	}
-	public Feedback(int userId, String words) {
+	public Feedback(int feedBackid, int userid, String words) {
 		super();
-		this.userId = userId;
+		this.feedBackid = feedBackid;
+		this.userid = userid;
 		this.words = words;
 	}
-	public int getUserId() {
-		return userId;
+	public int getFeedBackid() {
+		return feedBackid;
 	}
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setFeedBackid(int feedBackid) {
+		this.feedBackid = feedBackid;
+	}
+	public int getUserid() {
+		return userid;
+	}
+	public void setUserid(int userid) {
+		this.userid = userid;
 	}
 	public String getWords() {
 		return words;
@@ -24,6 +31,4 @@ public class Feedback {
 	public void setWords(String words) {
 		this.words = words;
 	}
-	
-	
 }

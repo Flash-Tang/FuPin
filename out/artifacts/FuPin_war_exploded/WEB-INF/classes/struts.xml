@@ -22,6 +22,14 @@
             <result name="success">userlogin.html</result>
             <result name="input">userregister.html</result>
         </action>
-
+        <action name="isapply" class="com.action.ApplyAction" method="isApply">
+            <result name="input">user/userapply.jsp</result>
+            <result name="wait"></result>
+            <result name="success"></result>
+        </action>
+        <action name="apply" class="com.action.ApplyAction" method="SubmitApply">
+            <result name="input">user/userapply.jsp</result>
+            <result name="success">user/user.jsp</result>
+        </action>
     </package>
 </struts>

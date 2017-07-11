@@ -1,35 +1,35 @@
 package com.model;
 
 public class Message {
-	public int adminId;
-	public int massageId;
-	public String Text;
-	public int getAdminId() {
-		return adminId;
-	}
-	public void setAdminId(int adminId) {
-		this.adminId = adminId;
-	}
-	public int getMassageId() {
-		return massageId;
-	}
-	public void setMassageId(int massageId) {
-		this.massageId = massageId;
-	}
-	public String getText() {
-		return Text;
-	}
-	public void setText(String text) {
-		Text = text;
-	}
+	public int adminid;
+	public int massageid;
+	public String text;
 	public Message(){
 		
 	}
-	public Message(int adminId, int massageId, String text) {
+	public Message(int adminid, int massageid, String text) {
 		super();
-		this.adminId = adminId;
-		this.massageId = massageId;
-		Text = text;
+		this.adminid = adminid;
+		this.massageid = massageid;
+		this.text = text;
+	}
+	public int getAdminid() {
+		return adminid;
+	}
+	public void setAdminid(int adminid) {
+		this.adminid = adminid;
+	}
+	public int getMassageid() {
+		return massageid;
+	}
+	public void setMassageid(int massageid) {
+		this.massageid = massageid;
+	}
+	public String getText() {
+		return text;
+	}
+	public void setText(String text) {
+		this.text = text;
 	}
 	
 	

@@ -19,5 +19,7 @@ public interface IUserService {
 	 public boolean userDemand(Demand demand);
 	 //в╥вы
 	 public List<Plan> helpTrack(int userId);
+
+	 public int getIdByName(String username);
 	 
 }
