@@ -5,10 +5,7 @@ import java.util.Date;
 public class Plan {
 	public int planid;
 	public int userid;
-	public String plan;
 	public float cost;
-	public Date startDate;
-	public Date endDate;
 	public int socialSecurity;
 	public int socialAssistance;
 	public int fosterService;
@@ -22,16 +19,13 @@ public class Plan {
 	public Plan(){
 		
 	}
-	public Plan(int planid, int userid, String plan, float cost, Date startDate, Date endDate, int socialSecurity,
-			int socialAssistance, int fosterService, int rehabilitation, int disabReconst, int education, int job,
-			int privation, int legalRight, int improlivCondition) {
+	public Plan(int planid, int userid, float cost, int socialSecurity, int socialAssistance, int fosterService,
+			int rehabilitation, int disabReconst, int education, int job, int privation, int legalRight,
+			int improlivCondition) {
 		super();
 		this.planid = planid;
 		this.userid = userid;
-		this.plan = plan;
 		this.cost = cost;
-		this.startDate = startDate;
-		this.endDate = endDate;
 		this.socialSecurity = socialSecurity;
 		this.socialAssistance = socialAssistance;
 		this.fosterService = fosterService;
@@ -55,29 +49,11 @@ public class Plan {
 	public void setUserid(int userid) {
 		this.userid = userid;
 	}
-	public String getPlan() {
-		return plan;
-	}
-	public void setPlan(String plan) {
-		this.plan = plan;
-	}
 	public float getCost() {
 		return cost;
 	}
 	public void setCost(float cost) {
 		this.cost = cost;
-	}
-	public Date getStartDate() {
-		return startDate;
-	}
-	public void setStartDate(Date startDate) {
-		this.startDate = startDate;
-	}
-	public Date getEndDate() {
-		return endDate;
-	}
-	public void setEndDate(Date endDate) {
-		this.endDate = endDate;
 	}
 	public int getSocialSecurity() {
 		return socialSecurity;
@@ -139,4 +115,6 @@ public class Plan {
 	public void setImprolivCondition(int improlivCondition) {
 		this.improlivCondition = improlivCondition;
 	}
+	
+	
 }

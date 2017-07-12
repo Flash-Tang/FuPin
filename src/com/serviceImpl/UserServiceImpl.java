@@ -59,37 +59,30 @@ public class UserServiceImpl implements IUserService {
 	}
 
 	@Override
-	public List<Plan> helpTrack(int userId) {
+	public Plan showPlan(int userId) {
 		ResultSet rs=iUserDao.getPlan(userId);
-		List<Plan> planList=new ArrayList<Plan>();
+		Plan userplan=new Plan();
 		try {
-			while(rs.next())
-			{
+			if(rs.next()) {
 				//取数据库表中的每一行值
-				int planid=rs.getInt("planid");
-				int userid=rs.getInt("userid");
-				String plan=rs.getString("plan");
-				float cost=rs.getFloat("cost");
-				Date startDate=rs.getDate("startDate");
-				Date endDate=rs.getDate("endDate");
-				int socialSecurity=rs.getInt("socialSecurity");
-				int socialAssistance=rs.getInt("socialAssistance");
-				int fosterService=rs.getInt("fosterService");
-				int rehabilitation=rs.getInt("rehabilitation");
-				int disabReconst=rs.getInt("disabReconst");
-				int education=rs.getInt("education");
-				int job=rs.getInt("job");
-				int privation=rs.getInt("privation");
-				int legalRight=rs.getInt("legalRight");
-				int improlivCondition=rs.getInt("improlivCondition");
+				int planid = rs.getInt("planid");
+				int userid = rs.getInt("userid");
+				float cost = rs.getFloat("cost");
+				int socialSecurity = rs.getInt("socialSecurity");
+				int socialAssistance = rs.getInt("socialAssistance");
+				int fosterService = rs.getInt("fosterService");
+				int rehabilitation = rs.getInt("rehabilitation");
+				int disabReconst = rs.getInt("disabReconst");
+				int education = rs.getInt("education");
+				int job = rs.getInt("job");
+				int privation = rs.getInt("privation");
+				int legalRight = rs.getInt("legalRight");
+				int improlivCondition = rs.getInt("improlivCondition");
 				//将每一行值放入javaBeaN中
-				Plan userplan=new Plan();
+
 				userplan.setPlanid(planid);
 				userplan.setUserid(userid);
-				userplan.setPlan(plan);
 				userplan.setCost(cost);
-				userplan.setStartDate(startDate);
-				userplan.setEndDate(endDate);
 				userplan.setSocialSecurity(socialSecurity);
 				userplan.setSocialAssistance(socialAssistance);
 				userplan.setFosterService(fosterService);
@@ -100,13 +93,14 @@ public class UserServiceImpl implements IUserService {
 				userplan.setPrivation(privation);
 				userplan.setLegalRight(legalRight);
 				userplan.setImprolivCondition(improlivCondition);
-				planList.add(userplan);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return planList;
+		return userplan;
 	}
+
+
 
 	public int getIdByName(String username) {
 		System.out.println("do service getIdByName");

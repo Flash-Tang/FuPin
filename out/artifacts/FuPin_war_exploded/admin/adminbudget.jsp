@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: panxi
@@ -18,7 +19,7 @@
     <div class="top"> <a href="<%=request.getContextPath()%>/admin/admin.jsp"><img class="logo" src="<%=request.getContextPath()%>/admin/images/logo.jpg" /></a>
         <ul class="nav">
             <li><a href="<%=request.getContextPath()%>/admin/adminsearch.jsp">信息查询</a></li>
-            <li class="seleli"><a href="<%=request.getContextPath()%>/admin/adminbudget.jsp">预算管理</a></li>
+            <li class="seleli"><a href="budget.action">预算管理</a></li>
             <li><a href="<%=request.getContextPath()%>/admin/adminhelp.jsp">帮扶管理</a></li>
             <li><a href="<%=request.getContextPath()%>/admin/adminfeedback.jsp">反馈管理</a></li>
             <li><a href="<%=request.getContextPath()%>/index.html">返回首页</a></li>
@@ -53,14 +54,35 @@
                 <li><a href="#">预算管理</a></li>
             </ul>
         </div>
-        <div class="adtip">
-            <div class="tip">
-                公告
-            </div>
-            <div class="adv">
-                <p>公司统一公告在这边展示</p>
-                <span> x </span> </div>
-        </div>
+        <form action="updatebudget.action" method="post">
+        <table border width="60">
+            <tr>
+                <th>ID</th>
+                <th>帮扶措施</th>
+                <th>花费</th>
+                <th>名额</th>
+            </tr>
+            <s:iterator value="budgetlist">
+                <tr>
+                    <td>
+                        <s:property value="measureId"/>
+                    </td>
+                    <td>
+                        <s:property value="measureName"/>
+                    </td>
+                    <td>
+                        <s:property value="cost"/>
+                    </td>
+                    <td>
+                        <input type="text" name="Number" value="<s:property value="number"/>">
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </s:iterator>
+        </table>
+            <input type="submit" value="确认更改"/>
+        </form>
     </div>
 </div>
 <div class="footer"></div>

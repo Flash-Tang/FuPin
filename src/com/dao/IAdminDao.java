@@ -9,6 +9,7 @@ import com.model.Demand;
 import com.model.Feedback;
 import com.model.Message;
 import com.model.Plan;
+import org.omg.CORBA.PUBLIC_MEMBER;
 
 public interface IAdminDao {
 	// 显示所有已发布的信息
@@ -30,7 +31,7 @@ public interface IAdminDao {
 	//删除申请人信息
 	public boolean deleteApply(int userid);
 	//确认申请人信息,添加plan表
-	public boolean passApply(int userid);
+	public boolean passApply(int userid,Demand demand);
 	//修改帮扶信息
 	public boolean updatePlan(Plan plans);
 	//删除帮扶信息
@@ -41,4 +42,11 @@ public interface IAdminDao {
 	public boolean deleteUser(int userid);
 	//查看注册用户
 	public ResultSet showAllUser();
+	public ResultSet showMeasure();
+	public boolean updateBudget(int measureId);
+	public ResultSet showPlan(int userid);
+	public ResultSet showPlanUser();
+	public boolean adjustPlan(int usreid, String item);
+	public ResultSet showMeasureNum();
+	public boolean adjustMeasureNum(String item);
 }

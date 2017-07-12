@@ -17,9 +17,9 @@
 <div class="header">
     <div class="top"> <a href="<%=request.getContextPath()%>/admin/admin.jsp"><img class="logo" src="<%=request.getContextPath()%>/admin/images/logo.jpg" /></a>
         <ul class="nav">
-            <li><a href="<%=request.getContextPath()%>/admin/adminsearch.jsp">信息查询</a></li>
-            <li><a href="<%=request.getContextPath()%>/admin/adminbudget.jsp">预算管理</a></li>
-            <li><a href="<%=request.getContextPath()%>/admin/adminhelp.jsp">帮扶管理</a></li>
+            <li><a href="<%=request.getContextPath()%>/showAllApply.action"">信息查询</a></li>
+            <li><a href="<%=request.getContextPath()%>/budget.action">预算管理</a></li>
+            <li><a href="<%=request.getContextPath()%>/showAllPlan.action">帮扶管理</a></li>
             <li><a href="<%=request.getContextPath()%>/admin/adminfeedback.jsp">反馈管理</a></li>
             <li><a href="<%=request.getContextPath()%>/index.html">返回首页</a></li>
         </ul>

@@ -31,5 +31,40 @@
             <result name="input">/user/userapply.jsp</result>
             <result name="success">/user/user.jsp</result>
         </action>
+        <action name="budget" class="com.action.BudgetAction" method="showBudget">
+            <result name="success">/admin/adminbudget.jsp</result>
+            <result name="error">/admin/admin.jsp</result>
+        </action>
+        <action name="updatebudget" class="com.action.BudgetAction" method="updateBudget">
+            <result name="success" type="redirectAction">budget</result>
+        </action>
+        <action name="showAllApply" class="com.action.AdminAction" method="showAllApply">
+            <result name="success">/admin/adminsearch.jsp</result>
+        </action>
+        <action name="showUserApply" class="com.action.AdminAction" method="showUserApply">
+            <result name="success">/admin/admincheck.jsp</result>
+        </action>
+
+        <action name="passApply" class="com.action.AdminAction" method="passApply">
+            <result name="success" type="redirectAction">showAllApply</result>
+            <result name="input" type="redirectAction">showAllApply</result>
+        </action>
+        <action name="deleteApply" class="com.action.AdminAction" method="deleteApply">
+            <result name="success" type="redirectAction">showAllApply</result>
+            <result name="input" type="redirectAction">showAllApply</result>
+        </action>
+        <action name="showAllPlan" class="com.action.AdminAction" method="showPlanUser">
+            <result name="success">/admin/adminhelp.jsp</result>
+        </action>
+        <action name="showplan" class="com.action.AdminAction" method="showPlan">
+            <result name="success">/admin/adminmanage.jsp</result>
+        </action>
+        <action name="adjustplan" class="com.action.AdminAction" method="adjustPlan">
+            <result name="success" type="redirectAction">
+                <param name="actionName">showplan</param>
+                <param name="userId">${userId}</param>
+            </result>
+            <result name="error" type="redirectAction">showplan</result>
+        </action>
     </package>
 </struts>

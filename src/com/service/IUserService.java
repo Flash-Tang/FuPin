@@ -18,8 +18,10 @@ public interface IUserService {
 	 //ÐèÇó
 	 public boolean userDemand(Demand demand);
 	 //×·×Ù
-	 public List<Plan> helpTrack(int userId);
+	 public Plan showPlan(int userId);
 
 	 public int getIdByName(String username);
+
+
 	 
 }

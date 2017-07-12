@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: panxi
@@ -53,14 +54,38 @@
                 <li><a href="#">帮扶管理</a></li>
             </ul>
         </div>
-        <div class="adtip">
-            <div class="tip">
-                公告
-            </div>
-            <div class="adv">
-                <p>公司统一公告在这边展示</p>
-                <span> x </span> </div>
-        </div>
+        <table border width="80%">
+            <tr>
+                <th>
+                    用户ID
+                </th>
+                <th>
+                    用户姓名
+                </th>
+                <th>
+                    性别
+                </th>
+                <th>
+                    残疾情况
+                </th>
+                <th>
+                    人均收入
+                </th>
+                <th>
+                    操作
+                </th>
+            </tr>
+            <s:iterator value="applyList">
+                <tr>
+                    <td><s:property value="userid" /></td>
+                    <td><s:property value="name" /></td>
+                    <td><s:property value="sex" /></td>
+                    <td><s:property value="disability" /></td>
+                    <td><s:property value="perIncome" /></td>
+                    <td> <a href="showplan.action?userId=<s:property value="userid"/>">查看</a></td>
+                </tr>
+            </s:iterator>
+        </table>
     </div>
 </div>
 <div class="footer"></div>

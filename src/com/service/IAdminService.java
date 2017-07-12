@@ -3,13 +3,7 @@ package com.service;
 import java.sql.ResultSet;
 import java.util.List;
 
-import com.model.Admin;
-import com.model.Apply;
-import com.model.Demand;
-import com.model.Feedback;
-import com.model.Message;
-import com.model.Plan;
-import com.model.User;
+import com.model.*;
 
 public interface IAdminService {
 	//显示所有已发布的信息
@@ -44,5 +38,11 @@ public interface IAdminService {
 	public boolean deleteUser(int userid);
 	//查看注册用户
 	public List<User> showAllUser();
+	public List<Measure> showMeasure();
+	public Plan showPlan(int userid);
+	public List<Apply> showPlanUser();
+	public boolean adjustPlan(int userid, String item);
+	public Demand showMeasureNum();
+	public boolean adjustMeasureNum(String item);
 	
 }

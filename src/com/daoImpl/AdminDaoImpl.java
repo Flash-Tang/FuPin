@@ -106,7 +106,7 @@ public class AdminDaoImpl implements IAdminDao {
 
 	@Override
 	public ResultSet showUserDemend(int userid) {
-		String sql = "select * from demand where where userid='" + userid + "'";
+		String sql = "select * from demand where userid='" + userid + "'";
 		try {
 			rs = db.queryData(sql);
 		} catch (Exception e) {
@@ -118,10 +118,10 @@ public class AdminDaoImpl implements IAdminDao {
 	// 删除用户申请表
 	@Override
 	public boolean deleteApply(int userid) {
-		String sql = "delete from basicinfo where userid='" + userid + "';delete from demand where userid='" + userid
-				+ "'";
+		String sql = "delete from basicinfo where userid='" + userid + "'";
+		String sql2="delete from demand where userid='" + userid + "'";
 		try {
-			if (db.Update(sql))
+			if (db.Update(sql2)&&db.Update(sql))
 				return true;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -130,11 +130,11 @@ public class AdminDaoImpl implements IAdminDao {
 	}
 
 	@Override
-	public boolean passApply(int userid) {
+	public boolean passApply(int userid,Demand demand) {
 		// plan表中planid设置自增
 
-		String sql = "insert into plan(userid,plan,cost,startDate,endDate,socialSecurity,socialAssistance,fosterService,rehabilitation,disabReconst,education,job,privation,legalRight,improlivCondition)values('"
-				+ userid + "',null,0,current_date(),null,0,0,0,0,0,0,0,0,0,0) ";
+		String sql = "insert into plan(userid,socialSecurity,socialAssistance,fosterService,rehabilitation,disabReconst,education,job,privation,legalRight,improlivCondition)values('"
+				+ userid + "','"+demand.getSocialSecurity()+"','"+demand.getSocialAssistance()+"','"+demand.getFosterService()+"','"+demand.getRehabilitation()+"','"+demand.getDisabReconst()+"','"+demand.getEducation()+"','"+demand.getJob()+"','"+demand.getPrivation()+"','"+demand.getLegalRight()+"','"+demand.getImprolivCondition()+"')";
 		try {
 			if (db.Update(sql))
 				return true;
@@ -161,8 +161,7 @@ public class AdminDaoImpl implements IAdminDao {
 	// endDate方法可能需要进行类型转换
 	@Override
 	public boolean updatePlan(Plan plans) {
-		String sql = "update plan set plan='" + plans.plan + "',cost='" + plans.cost + "',endDate='" + plans.endDate
-				+ "',socialSecurity='" + plans.socialSecurity + "',socialAssistance='" + plans.socialAssistance
+		String sql = "update plan set plan=cost='" + plans.cost + "',socialSecurity='" + plans.socialSecurity + "',socialAssistance='" + plans.socialAssistance
 				+ "',fosterService='" + plans.fosterService + "',rehabilitation='" + plans.rehabilitation
 				+ "',disabReconst='" + plans.disabReconst + "',education='" + plans.education + "',job='" + plans.job
 				+ "',privation='" + plans.privation + "',legalRight='" + plans.legalRight + "',improlivCondition='"
@@ -176,6 +175,7 @@ public class AdminDaoImpl implements IAdminDao {
 		}
 		return false;
 	}
+
 
 	@Override
 	public boolean updateAdmin(Admin admin) {
@@ -207,10 +207,83 @@ public class AdminDaoImpl implements IAdminDao {
 		String sql = "select * from useraccount";
 		try {
 			rs = db.queryData(sql);
-		} catch (ClassNotFoundException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return rs;
 	}
 
+	@Override
+	public ResultSet showMeasure() {
+		String sql = "select * from measure";
+		try {
+			rs = db.queryData(sql);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return rs;
+	}
+
+    @Override
+    public boolean updateBudget(int measureId) {
+	    String sql = "update measure set number = ";
+        return false;
+    }
+
+	@Override
+	public ResultSet showPlan(int userid) {
+		String sql = "select * from plan where userid='"+ userid +"'";
+		try {
+			rs = db.queryData(sql);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return rs;
+	}
+
+	@Override
+	public ResultSet showPlanUser() {
+		String sql = "select basicinfo.userid,name,sex,disability,perIncome from basicinfo, plan where basicinfo.userid = plan.userid";
+		try {
+			rs = db.queryData(sql);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return rs;
+	}
+
+	@Override
+	public boolean adjustPlan(int userid, String item) {
+		String sql = "update plan set "+ item +"= 2 where userid = '"+ userid +"'";
+		try {
+			if(db.Update(sql))
+				return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	@Override
+	public ResultSet showMeasureNum() {
+		String sql = "select number from measure";
+		try {
+			rs = db.queryData(sql);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return rs;
+	}
+
+	@Override
+	public boolean adjustMeasureNum(String item) {
+		String sql = "update measure set number=number-1 where measureName='"+ item+"'";
+        try {
+            if(db.Update(sql))
+                return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+	}
 }
