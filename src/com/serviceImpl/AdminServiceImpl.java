@@ -353,5 +353,66 @@ public class AdminServiceImpl implements IAdminService {
 	public boolean adjustMeasureNum(String item) {
 		return iAdminDao.adjustMeasureNum(item);
 	}
+	@Override
+	public List<Place> distributeAnalyze() {
+		ResultSet rs=iAdminDao.distributeAnalyze();
+		List<Place> placeList=new ArrayList<Place>();
+		try {
+			while(rs.next())
+			{
+				//取数据库表中的每一行值
+				String placeOfDemicile=rs.getString("placeOfDemicile");
+				String poorNum=rs.getString("poorNum");
+				String avgIncome=rs.getString("avgIncome");
+				//将每一行值放入javaBeaN中
+				Place place=new Place();
+				place.setPlaceOfDemicile(placeOfDemicile);
+				place.setPoorNum(poorNum);
+				place.setAvgIncome(avgIncome);
+				//将获取的javaBean对象放入集合中
+				placeList.add(place);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return placeList;
+	}
+
+	@Override
+	public List<DemandAna> demandAnalyze() {
+		ResultSet rs=iAdminDao.demandAnalyze();
+		List<DemandAna> demandAnaList=new ArrayList<DemandAna>();
+		try {
+			while(rs.next())
+			{
+				//取数据库表中的每一行值
+				int socialSecurity=rs.getInt("socialSecurity");
+				int socialAssistance=rs.getInt("socialAssistance");
+				int fosterService=rs.getInt("fosterService");
+				int rehabilitation=rs.getInt("rehabilitation");
+				int disabReconst=rs.getInt("disabReconst");
+				int education=rs.getInt("education");
+				int job=rs.getInt("job");
+				int privation=rs.getInt("privation");
+				int legalRight=rs.getInt("legalRight");
+				int improlivCondition=rs.getInt("improlivCondition");
+				//将获取的javaBean对象放入集合中
+				DemandAna demandAna=new DemandAna();
+				demandAna.setSocialSecurity(socialSecurity);
+				demandAna.setSocialAssistance(socialAssistance);
+				demandAna.setFosterService(fosterService);
+				demandAna.setRehabilitation(rehabilitation);
+				demandAna.setDisabReconst(disabReconst);
+				demandAna.setEducation(education);
+				demandAna.setJob(job);
+				demandAna.setPrivation(privation);
+				demandAna.setLegalRight(legalRight);
+				demandAna.setImprolivCondition(improlivCondition);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return demandAnaList;
+	}
 
 }

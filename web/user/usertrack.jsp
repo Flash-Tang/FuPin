@@ -53,14 +53,10 @@
                 <li><a href="#">帮扶追踪</a></li>
             </ul>
         </div>
-        <div class="adtip">
-            <div class="tip">
-                公告
-            </div>
-            <div class="adv">
-                <p>公司统一公告在这边展示</p>
-                <span> x </span> </div>
-        </div>
+        <form action="usertrack.action" method="post">
+            <input type="text" name="user.username"/>
+            <input type="submit"/>
+        </form>
     </div>
 </div>
 <div class="footer"></div>

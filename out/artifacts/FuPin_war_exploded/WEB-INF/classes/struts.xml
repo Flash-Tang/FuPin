@@ -64,7 +64,17 @@
                 <param name="actionName">showplan</param>
                 <param name="userId">${userId}</param>
             </result>
-            <result name="error" type="redirectAction">showplan</result>
+            <result name="error" type="redirectAction">
+                <param name="actionName">showplan</param>
+                <param name="userId">${userId}</param>
+            </result>
         </action>
+
+
+        <action name="usertrack" class="com.action.UserAction" method="UserTrack">
+            <result name="success">/user/usertrackinfo.jsp</result>
+        </action>
+
+
     </package>
 </struts>

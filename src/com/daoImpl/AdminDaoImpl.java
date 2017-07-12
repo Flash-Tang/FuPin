@@ -286,4 +286,26 @@ public class AdminDaoImpl implements IAdminDao {
         }
         return false;
 	}
+    @Override
+    public ResultSet distributeAnalyze() {
+        String sql = "select placeOfDemicile,count(*) as poorNum, AVG(perIncome) as avgIncome from basicinfo group by placeOfDemicile order by AVG(perIncome)";
+        try {
+            rs = db.queryData(sql);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return rs;
+    }
+
+    @Override
+    public ResultSet demandAnalyze() {
+        String sql = "select placeOfDemicile,count(socialSecurity) as socialSecurity,count(socialAssistance) as socialAssistance,count(fosterService) as fosterService,count(rehabilitation) as rehabilitation,count(disabReconst) as disabReconst,count(education) as education,count(job) as job,count(privation) as privation,count(legalRight) as legalRight,count(improlivCondition) as improlivCondition from demand";
+
+        try {
+            rs = db.queryData(sql);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return rs;
+    }
 }
