@@ -11,12 +11,13 @@
 </head>
 <body>
 <div class="header">
-    <div class="top"> <a href="<%=request.getContextPath()%>/admin/admin.jsp"><img class="logo" src="<%=request.getContextPath()%>/admin/images/logo.jpg" /></a>
+    <div class="top"> <a href="<%=request.getContextPath()%>/showAllMessage.action"><img class="logo" src="<%=request.getContextPath()%>/admin/images/logo.jpg" /></a>
         <ul class="nav">
-            <li class="seleli"><a href="<%=request.getContextPath()%>/showAllApply.action">信息审核</a></li>
-            <li><a href="<%=request.getContextPath()%>/admin/adminbudget.jsp">预算管理</a></li>
-            <li><a href="<%=request.getContextPath()%>/admin/adminhelp.jsp">帮扶管理</a></li>
-            <li><a href="<%=request.getContextPath()%>/admin/adminfeedback.jsp">反馈管理</a></li>
+            <li><a href="<%=request.getContextPath()%>/showAllApply.action"">信息审核</a></li>
+            <li><a href="<%=request.getContextPath()%>/budget.action">预算管理</a></li>
+            <li class="seleli"><a href="<%=request.getContextPath()%>/showAllPlan.action">帮扶管理</a></li>
+            <li><a href="<%=request.getContextPath()%>/DataAnalyze.action">数据分析</a></li>
+            <li><a href="<%=request.getContextPath()%>/showAllFeedback.action">反馈管理</a></li>
             <li><a href="<%=request.getContextPath()%>/index.html">返回首页</a></li>
         </ul>
     </div>
@@ -46,11 +47,12 @@
         <div class="currmenu">
             <ul class="rig_nav">
                 <li class="rig_seleli"><a href="#">当前</a><span> x </span></li>
-                <li><a href="#">信息查询</a></li>
+                <li><a href="#">帮扶管理</a></li>
             </ul>
         </div>
-        <h2>用户ID:<s:property value="plan.userid"/></h2>
-        <table border width="80%">
+        <br><br>
+        <div style="font-size: 15px;text-align: center;font-family: "microsoft yahei", Arial, Helvetica, sans-serif">用户ID:<s:property value="plan.userid"/></div>
+        <table border="2" align="center" bordercolor="#6666FF" width="80%">
             <tr>
                 <th>
                     扶贫项目

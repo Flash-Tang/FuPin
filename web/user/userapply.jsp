@@ -15,13 +15,12 @@
 </head>
 <body>
 <div class="header">
-    <div class="top"><a href="<%=request.getContextPath()%>/user/user.jsp"><img class="logo" src="<%=request.getContextPath()%>/user/images/logo.jpg" /></a>
+    <div class="top"><a href="<%=request.getContextPath()%>/getMessage.action"><img class="logo" src="<%=request.getContextPath()%>/user/images/logo.jpg" /></a>
         <ul class="nav">
-            <li><a href="<%=request.getContextPath()%>/user/userinfo.jsp">个人信息</a></li>
             <li class="seleli"><a href="<%=request.getContextPath()%>/user/userapply.jsp">申请帮扶</a></li>
             <li><a href="<%=request.getContextPath()%>/user/usertrack.jsp">帮扶追踪</a></li>
             <li><a href="<%=request.getContextPath()%>/user/userfeedback.jsp">反馈信息</a></li>
-            <li><a href="<%=request.getContextPath()%>/index.jsp">返回首页</a></li>
+            <li><a href="<%=request.getContextPath()%>/index.html">返回首页</a></li>
         </ul>
     </div>
 </div>
@@ -56,237 +55,184 @@
         </div>
         <div class="myconment" id="loader"style="width: 80%;">
 
-            <div class="container">
-                <div class="public-nav">您当前的位置：<a href="">基本信息添加</a></div>
-                <div class="public-content">
-                    <div class="public-content-header">
-                        <h3>贫困户基本信息表</h3>
-                    </div>
-                    <div class="public-content-cont">
-                        <form action="apply" method="post">
-                            <div class="form-group">
-                                <label for="">用户账号</label>
-                                <input class="form-input-txt" type="text" name="user.username" value="" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="">姓名</label>
-                                <input class="form-input-txt" type="text" name="applys.name" value="" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="">性别</label>
-                                <p>
-                                    <label>
-                                        <input type="radio" name="applys.sex" value="male" id="RadioGroup1_0">
-                                        男</label>
-                                    <label>
-                                        <input type="radio" name="applys.sex" value="female" id="RadioGroup1_1">
-                                        女</label>
-
-                                </p>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="">民族</label>
-                                <input class="form-input-txt" type="text" name="applys.nation" value="" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="">联系方式</label>
-                                <input class="form-input-txt" type="text" name="applys.telephone" value="" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="">身份证号</label>
-                                <input class="form-input-txt" type="text" name="applys.idCardNum" value="" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="">残疾状况</label>
-                                <select name="applys.disability" class="form-select">
-                                    <option value="无残疾">无残疾</option>
-                                    <option value="轻微残疾">轻微残疾</option>
-                                    <option value="重度残疾">重度残疾</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="">残疾症编号</label>
-                                <input class="form-input-txt" type="text" name="applys.disabCardNum" value="" />
-                            </div>
-                            <div class="form-group">
-                                <label for="">家庭人数</label>
-                                <input type="text" name="applys.famMemNum" value=""/>
-                            </div>
-                            <div class="form-group">
-                                <label for="">户籍所在地</label>
-                                <input class="form-input-txt" type="text" name="applys.placeOfDemicile" value="" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="">家庭人均收入</label>
-                                <input class="form-input-txt" type="text" name="applys.perIncome" value="" />
-                            </div>
-                            <div class="form-group">
-                                <label for="">受教育程度</label>
-                                <select name="applys.education" class="form-select">
-                                    <option value="未受教育">未受教育</option>
-                                    <option value="小学">小学</option>
-                                    <option value="初中">初中</option>
-                                    <option value="高中">高中</option>
-                                    <option value="本科及以上">本科及以上</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="">婚姻状况</label>
-                                <p>
-                                    <label>
-                                        <input type="radio" name="applys.marriage" value="已婚" id="RadioGroup1_0">
-                                        已婚</label>
-                                    <label>
-                                        <input type="radio" name="applys.marriage" value="未婚" id="RadioGroup1_1">
-                                        未婚</label>
-
-                                </p>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="">家庭住址</label>
-                                <input class="form-input-txt" type="text" name="applys.address" value="" />
-                            </div>
-                            --------------
-                            <div class="form-group">
-                                <label for="">社会保险</label>
-                                <p>
-                                    <label >
-                                        <input  type="radio" name="demand.socialSecurity" value= "1" id="RadioGroup1_0">
-                                        有</label>
-                                    <label>
-                                        <input type="radio" name="demand.socialSecurity" value= "0" id="RadioGroup1_1">
-                                        无</label>
-
-                                </p>
-                            </div>
-                            ------------------------
-                            <div class="form-group">
-                                <label for="">社会救助福利补贴</label>
-                                <p>
-                                    <label >
-                                        <input  type="radio" name="demand.socialAssistance" value="1" id="RadioGroup1_0">
-                                        需要</label>
-                                    <label>
-                                        <input type="radio" name="demand.socialAssistance" value="0" id="RadioGroup1_1">
-                                        不需要</label>
-
-                                </p>
-                            </div>
-                            ------------------------
-                            <div class="form-group">
-                                <label for="">托养服务</label>
-                                <label >
-                                    <input  type="radio" name="demand.fosterService" value="1" id="RadioGroup1_0">
-                                    需要</label>
-                                <label>
-                                    <input type="radio" name="demand.fosterService" value="0" id="RadioGroup1_1">
-                                    不需要</label>
-
-                            </div>
-                            ------------------------
-                            <div class="form-group">
-                                <label for="">康复</label>
-
-                                <label >
-                                    <input  type="radio" name="demand.rehabilitation" value="1" id="RadioGroup1_0">
-                                    需要</label>
-                                <label>
-                                    <input type="radio" name="demand.rehabilitation" value="0" id="RadioGroup1_1">
-                                    不需要</label>
-                            </div>
-                            ------------------------
-                            <div class="form-group">
-                                <label for="">无障碍改造</label>
-                                <p>
-                                    <label >
-                                        <input  type="radio" name="demand.disabReconst" value="1" id="RadioGroup1_0">
-                                        需要</label>
-                                    <label>
-                                        <input type="radio" name="demand.disabReconst" value="0" id="RadioGroup1_1">
-                                        不需要</label>
-
-                                </p>
-                            </div>
-                            ------------------------
-                            <div class="form-group">
-                                <label for="">教育文化体育</label>
-                                <p>
-                                    <label >
-                                        <input  type="radio" name="demand.education" value="1" id="RadioGroup1_0">
-                                        需要</label>
-                                    <label>
-                                        <input type="radio" name="demand.education" value="0" id="RadioGroup1_1">
-                                        不需要</label>
-
-                                </p>
-                            </div>
-                            ------------------------
-                            <div class="form-group">
-                                <label for="">就业</label>
-                                <p>
-                                    <label >
-                                        <input  type="radio" name="demand.job" value="1" id="RadioGroup1_0">
-                                        需要</label>
-                                    <label>
-                                        <input type="radio" name="demand.job" value="0" id="RadioGroup1_1">
-                                        不需要</label>
-
-                                </p>
-                            </div>
-                            ------------------------
-                            <div class="form-group">
-                                <label for="">扶贫</label>
-                                <p>
-                                    <label >
-                                        <input  type="radio" name="demand.privation" value="1" id="RadioGroup1_0">
-                                        需要</label>
-                                    <label>
-                                        <input type="radio" name="demand.privation" value="0" id="RadioGroup1_1">
-                                        不需要</label>
-
-                                </p>
-                            </div>
-                            ------------------------
-                            <div class="form-group">
-                                <label for="">维权</label>
-                                <p>
-                                    <label >
-                                        <input  type="radio" name="demand.legalRight" value="1" id="RadioGroup1_0">
-                                        需要</label>
-                                    <label>
-                                        <input type="radio" name="demand.legalRight" value="0" id="RadioGroup1_1">
-                                        不需要</label>
-
-                                </p>
-                            </div>
-                            ------------------------
-                            <div class="form-group">
-                                <label for="">改善基本生活条件</label>
-                                <p>
-                                    <label >
-                                        <input  type="radio" name="demand.improlivCondition" value="1" id="RadioGroup1_0">
-                                        需要</label>
-                                    <label>
-                                        <input type="radio" name="demand.improlivCondition" value="0" id="RadioGroup1_1">
-                                        不需要</label>
-
-                                </p>
-                            </div>
-                            <div class="form-group" style="margin-left:250px;">
-                                <input type="submit" class="sub-btn" value="提  交" />
-                                <input type="reset" class="sub-btn" value="重  置" />
-                            </div>
-                        </form>
-                    </div>
-                </div>
+    <div class="container">
+    <form action="apply.action" method="post" name="myForm">
+        <br><br><br>
+      <table border="2" align="center" bordercolor="#6666FF" width="80%">
+        <tr> 
+          <td colspan="4" bgcolor="#6666FF" align="center"> 
+            <font color="#FFFFFF">请填入下列个人信息</font>
+          </td>
+        </tr>
+        <tr> 
+          <td align="center"  colspan="0" >用户账号</td>
+          <td colspan="3"><input name="user.username" type="text" size="15"></td>
+        </tr>
+        <tr> 
+          <td align="center">姓名</td>
+          <td><input name="applys.name" type="text" size="15">
+          </td>
+           <td align="center">社会保险</td>
+          <td align="center"><label>
+              <input type="radio" name="demand.socialSecurity" value="1" id="RadioGroup1_0">
+              有</label>
+            <label>
+              <input type="radio" name="demand.socialSecurity" value="0" id="RadioGroup1_1">
+              无</label>
+          </td>
+        </tr>
+        <tr> 
+          <td align="center">性别</td>
+          <td> <label>
+              <input type="radio" name="applys.sex" value="男" id="RadioGroup1_0">
+              男</label>
+            <label>
+              <input type="radio" name="applys.sex" value="女" id="RadioGroup1_1">
+              女</label></td>
+            <td align="center">托养服务</td>
+          <td align="center"> <label>
+              <input type="radio" name="demand.fosterService" value="1" id="RadioGroup1_0">
+              需要</label>
+            <label>
+              <input type="radio" name="demand.fosterService" value="0" id="RadioGroup1_1">
+              不需要</label></td>
+        </tr>
+        
+        <tr>
+          <td align="center">民族</td>
+          <td><input name="applys.nation" type="text" size="8"></td>
+          <td align="center">康复</td>
+          <td align="center"> <label>
+              <input type="radio" name="demand.rehabilitation" value="1" id="RadioGroup1_0">
+              需要</label>
+            <label>
+              <input type="radio" name="demand.rehabilitation" value="0" id="RadioGroup1_1">
+              不需要</label></td>
+        </tr>
+        <tr> 
+          <td align="center">联系方式</td>
+          <td> 
+           <input name="applys.telephone" type="text" size="15">
+          </td>
+          
+           <td align="center">社会救助福利补贴</td>
+          <td align="center"> <label>
+              <input type="radio" name="demand.socialAssistance" value="1" id="RadioGroup1_0">
+              需要</label>
+            <label>
+              <input type="radio" name="demand.socialAssistance" value="0" id="RadioGroup1_1">
+              不需要</label></td>
+        </tr>
+        <tr> 
+          <td align="center">身份证号</td>
+          <td>
+            <input type="text" name="applys.idCardNum" size="15">
+          </td>
+           <td align="center">无障碍改造</td>
+          <td align="center"> <label>
+              <input type="radio" name="demand.disabReconst" value="1" id="RadioGroup1_0">
+              需要</label>
+            <label>
+              <input type="radio" name="demand.disabReconst" value="0" id="RadioGroup1_1">
+              不需要</label></td>
+        </tr>
+        <tr > 
+          <td align="center">残疾状况</td>
+          <td>
+            <select name="applys.disability" class="form-select">
+             <option value="无残疾">无残疾</option>
+             <option value="轻微残疾">轻微残疾</option>
+             <option value="重度残疾">重度残疾</option>
+          </select>
+          </td>
+           <td align="center">教育文化体育</td>
+          <td align="center"> <label>
+              <input type="radio" name="demand.education" value="1" id="RadioGroup1_0">
+              需要</label>
+            <label>
+              <input type="radio" name="demand.education" value="0" id="RadioGroup1_1">
+              不需要</label></td>
+        </tr>
+        <tr> 
+          <td align="center">残疾证编号</td>
+          <td><input name="applys.disabCardNum" type="text" size="20"></td>
+           <td align="center">就业</td>
+          <td align="center"> <label>
+              <input type="radio" name="demand.job" value="1" id="RadioGroup1_0">
+              需要</label>
+            <label>
+              <input type="radio" name="demand.job" value="0" id="RadioGroup1_1">
+              不需要</label></td>
+        </tr>
+        <tr> 
+          <td align="center">家庭人数</td>
+          <td>
+                  <input name="applys.famMemNum" type="text" size="10">
+          </td>
+           <td align="center">扶贫</td>
+          <td align="center"> <label>
+              <input type="radio" name="demand.privation" value="1" id="RadioGroup1_0">
+              需要</label>
+            <label>
+              <input type="radio" name="demand.privation" value="0" id="RadioGroup1_1">
+              不需要</label></td>
+        </tr>
+        <tr>
+          <td align="center">户籍所在地</td>
+          <td><input name="applys.placeOfDemicile" type="text" size="40"></td>
+          <td align="center">维权</td>
+          <td align="center"> <label>
+              <input type="radio" name="demand.legalRight" value="1" id="RadioGroup1_0">
+              需要</label>
+            <label>
+              <input type="radio" name="demand.legalRight" value="0" id="RadioGroup1_1">
+              不需要</label></td>
+        </tr>
+        <tr> 
+          <td align="center">家庭人均收入</td>
+          <td><input name="applys.perIncome" type="text" value="" size="10"></td>
+           <td align="center">改善基本生活条件</td>
+          <td align="center"> <label>
+              <input type="radio" name="demand.improlivCondition" value="1" id="RadioGroup1_0">
+              需要</label>
+            <label>
+              <input type="radio" name="demand.improlivCondition" value="0" id="RadioGroup1_1">
+              不需要</label></td>
+        </tr>
+        <tr> 
+          <td align="center">受教育程度</td>
+          <td >
+           <select name="applys.education" class="form-select">
+            <option value="未受教育">未受教育</option>
+             <option value="小学">小学</option>
+             <option value="初中">初中</option>
+             <option value="高中">高中</option>
+             <option value="本科及以上">本科及以上</option>
+          </select>
+          </td>
+          <td align="center">婚姻状况</td>
+        <td align="center">
+        <label>
+              <input type="radio" name="applys.marriage" value="已婚" id="RadioGroup1_0">
+              已婚</label>
+            <label>
+              <input type="radio" name="applys.marriage" value="未婚" id="RadioGroup1_1">
+             未婚</label>
+        </td>
+        </tr>
+         <tr> 
+          <td align="center">家庭住址</td>
+          <td colspan="3"><input name="applys.address" type="text" value="" size="86"></td>
+        </tr>
+        
+        <tr > 
+          <td align="center" colspan="4">
+             <input type="submit" class="sub-btn" value="提  交" />
+          <input type="reset" class="sub-btn" value="重  置" />
+          </td>
+        </tr>
+      </table>
+    </form>
             </div>
         </div>
 </div>

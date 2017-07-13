@@ -18,12 +18,13 @@
 </head>
 <body>
 <div class="header">
-    <div class="top"> <a href="<%=request.getContextPath()%>/admin/admin.jsp"><img class="logo" src="<%=request.getContextPath()%>/admin/images/logo.jpg" /></a>
+    <div class="top"> <a href="<%=request.getContextPath()%>/showAllMessage.action"><img class="logo" src="<%=request.getContextPath()%>/admin/images/logo.jpg" /></a>
         <ul class="nav">
-            <li class="seleli"><a href="<%=request.getContextPath()%>/showAllApply.action">信息审核</a></li>
-            <li><a href="budget.action">预算管理</a></li>
-            <li><a href="<%=request.getContextPath()%>/admin/adminhelp.jsp">帮扶管理</a></li>
-            <li><a href="<%=request.getContextPath()%>/admin/adminfeedback.jsp">反馈管理</a></li>
+            <li class="seleli"><a href="<%=request.getContextPath()%>/showAllApply.action"">信息审核</a></li>
+            <li><a href="<%=request.getContextPath()%>/budget.action">预算管理</a></li>
+            <li><a href="<%=request.getContextPath()%>/showAllPlan.action">帮扶管理</a></li>
+            <li><a href="<%=request.getContextPath()%>/DataAnalyze.action">数据分析</a></li>
+            <li><a href="<%=request.getContextPath()%>/showAllFeedback.action">反馈管理</a></li>
             <li><a href="<%=request.getContextPath()%>/index.html">返回首页</a></li>
         </ul>
     </div>
@@ -53,10 +54,10 @@
         <div class="currmenu">
             <ul class="rig_nav">
                 <li class="rig_seleli"><a href="#">当前</a><span> x </span></li>
-                <li><a href="#">信息查询</a></li>
+                <li><a href="#">信息审核</a></li>
             </ul>
         </div>
-        <table border width="80%">
+        <table border="2" align="center" bordercolor="#6666FF" width="80%">
             <tr>
                 <th>
                     用户ID
@@ -79,12 +80,12 @@
             </tr>
             <s:iterator value="applyList">
                 <tr>
-                    <td><s:property value="userid" /></td>
-                    <td><s:property value="name" /></td>
-                    <td><s:property value="sex" /></td>
-                    <td><s:property value="disability" /></td>
-                    <td><s:property value="perIncome" /></td>
-                    <td> <a href="showUserApply.action?userId=<s:property value="userid"/>">查看</a></td>
+                    <td align="center"><s:property value="userid" /></td>
+                    <td align="center"><s:property value="name" /></td>
+                    <td align="center"><s:property value="sex" /></td>
+                    <td align="center"><s:property value="disability" /></td>
+                    <td align="center"><s:property value="perIncome" /></td>
+                    <td align="center"> <a href="showUserApply.action?userId=<s:property value="userid"/>">查看</a></td>
                 </tr>
             </s:iterator>
         </table>

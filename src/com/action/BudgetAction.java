@@ -25,11 +25,29 @@ public class BudgetAction {
     List<Measure> budgetlist;
     Measure measure;
     IAdminService iAdminService = new AdminServiceImpl();
-    int ID;
+
+    public int getID() {
+        return ID;
+    }
 
     public void setID(int ID) {
         this.ID = ID;
     }
+
+
+    int ID;
+
+    public String getAct() {
+        return act;
+    }
+
+    public void setAct(String act) {
+        this.act = act;
+    }
+
+    String  act;
+
+
 
     public String showBudget(){
         budgetlist = iAdminService.showMeasure();
@@ -39,7 +57,14 @@ public class BudgetAction {
     }
 
     public String updateBudget(){
-
-    return "success";
+        if(act.equals("add")) {
+            iAdminService.addMeasureNum(ID);
+            return "success";
+        }
+        else if(act.equals("cut")) {
+            iAdminService.cutMeasureNum(ID);
+            return "success";
+        }
+        else return "error";
     }
 }

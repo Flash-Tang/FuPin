@@ -18,8 +18,8 @@ import com.service.IUserService;
 public class UserServiceImpl implements IUserService {
 	IUserDao iUserDao=new UserDaoImpl();
 	@Override
-	public List<Message> getMessage(int messageId) {
-		ResultSet rs=iUserDao.getMessage(messageId);
+	public List<Message> getMessage() {
+		ResultSet rs=iUserDao.getMessage();
 		List<Message> messageList=new ArrayList<Message>();
 		try {
 			while(rs.next())
@@ -41,6 +41,7 @@ public class UserServiceImpl implements IUserService {
 		}
 		return messageList;
 	}
+
 
 	@Override
 	public boolean userApply(Apply apply) {

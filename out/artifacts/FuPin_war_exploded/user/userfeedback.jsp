@@ -5,64 +5,93 @@
   Time: 17:07
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=gbk" language="java" %>
+<%@ page contentType="text/html;charset=utf-8" language="java"%>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
-    <meta name="description" content="¾«×¼·öÆ¶ÐÅÏ¢»¯¹ÜÀíÆ½Ì¨" />
-    <title>¾«×¼·öÆ¶ÐÅÏ¢»¯¹ÜÀíÆ½Ì¨</title>
-    <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/user/css/css.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="ç²¾å‡†æ‰¶è´«ä¿¡æ¯åŒ–ç®¡ç†å¹³å°" />
+<title>ç²¾å‡†æ‰¶è´«ä¿¡æ¯åŒ–ç®¡ç†å¹³å°</title>
+<link type="text/css" rel="stylesheet"
+	href="<%=request.getContextPath()%>/user/css/css.css" />
 </head>
 <body>
-<div class="header">
-    <div class="top"><a href="<%=request.getContextPath()%>/user/user.jsp"><img class="logo" src="<%=request.getContextPath()%>/user/images/logo.jpg" /></a>
-        <ul class="nav">
-            <li><a href="<%=request.getContextPath()%>/user/userinfo.jsp">¸öÈËÐÅÏ¢</a></li>
-            <li><a href="<%=request.getContextPath()%>/user/userapply.jsp">ÉêÇë°ï·ö</a></li>
-            <li><a href="<%=request.getContextPath()%>/user/usertrack.jsp">°ï·ö×·×Ù</a></li>
-            <li class="seleli"><a href="<%=request.getContextPath()%>/user/userfeedback.jsp">·´À¡ÐÅÏ¢</a></li>
-            <li><a href="<%=request.getContextPath()%>/index.html">·µ»ØÊ×Ò³</a></li>
-        </ul>
+	<div class="header">
+		<div class="top">
+			<a href="<%=request.getContextPath()%>/getMessage.action"><img
+				class="logo"
+				src="<%=request.getContextPath()%>/user/images/logo.jpg" /></a>
+			<ul class="nav">
+
+				<li><a href="<%=request.getContextPath()%>/user/userapply.jsp">ç”³è¯·å¸®æ‰¶</a></li>
+				<li><a href="<%=request.getContextPath()%>/user/usertrack.jsp">å¸®æ‰¶è¿½è¸ª</a></li>
+				<li class="seleli"><a
+					href="<%=request.getContextPath()%>/user/userfeedback.jsp">åé¦ˆä¿¡æ¯</a></li>
+				<li><a href="<%=request.getContextPath()%>/index.html">è¿”å›žé¦–é¡µ</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<div class="leftbar">
+			<div class="lm01">
+				<img class="peptx"
+					src="<%=request.getContextPath()%>/user/images/user.png" />
+				<div class="pepdet">
+					<p class="pepname">æ¬¢è¿Žå›žæ¥ï¼Œæ™®é€šç”¨æˆ·</p>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="lm02">
+				<div class="title">
+					<img class="icon"
+						src="<%=request.getContextPath()%>/user/images/dataicon.jpg" />
+					<h2>æ—¥åŽ†</h2>
+				</div>
+				<div class="detail">
+					<img class=""
+						src="<%=request.getContextPath()%>/user/images/kj_01.jpg" />
+				</div>
+			</div>
+			<div class="lm03">
+				<div class="title">
+					<img style="padding-right:5px;" class="icon"
+						src="<%=request.getContextPath()%>/user/images/weaicon.jpg" />
+					<h2>å¤©æ°”</h2>
+				</div>
+				<div class="detail">
+					<img class=""
+						src="<%=request.getContextPath()%>/user/images/kj_02.jpg" />
+				</div>
+			</div>
+		</div>
+		<div class="mainbody">
+			<div class="currmenu">
+				<ul class="rig_nav">
+					<li class="rig_seleli"><a href="#">å½“å‰</a><span> x </span></li>
+					<li><a href="#">åé¦ˆä¿¡æ¯</a></li>
+				</ul>
+			</div>
+		<br><br>
+			<center>
+			<form action="sendFeedback.action" method="post">
+			<table border width="50%">
+			<tr>
+			<td>ç”¨æˆ·å</td>
+			<td><input text name="username"></text></td>
+			</tr>
+			<tr>
+			<td>ç”¨æˆ·åé¦ˆ</td>
+			<td><textarea name="feedback.words" rows="10" cols="60"></textarea></td>
+			</tr>
+			<tr>
+<td align="center" colspan="2">
+<input type="submit" value="æäº¤"/>
+</td>
+</tr>
+</table>
+</form>
+			</center>
     </div>
-</div>
-<div class="container">
-    <div class="leftbar">
-        <div class="lm01"> <img class="peptx" src="<%=request.getContextPath()%>/user/images/user.png" />
-            <div class="pepdet">
-                <p class="pepname">»¶Ó­»ØÀ´£¬ÆÕÍ¨ÓÃ»§</p>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="lm02">
-            <div class="title"><img class="icon" src="<%=request.getContextPath()%>/user/images/dataicon.jpg" />
-                <h2>ÈÕÀú</h2>
-            </div>
-            <div class="detail"> <img class="" src="<%=request.getContextPath()%>/user/images/kj_01.jpg" /> </div>
-        </div>
-        <div class="lm03">
-            <div class="title"><img style="padding-right:5px;" class="icon" src="<%=request.getContextPath()%>/user/images/weaicon.jpg" />
-                <h2>ÌìÆø</h2>
-            </div>
-            <div class="detail"> <img class="" src="<%=request.getContextPath()%>/user/images/kj_02.jpg" /> </div>
-        </div>
-    </div>
-    <div class="mainbody">
-        <div class="currmenu">
-            <ul class="rig_nav">
-                <li class="rig_seleli"><a href="#">µ±Ç°</a><span> x </span></li>
-                <li><a href="#">·´À¡ÐÅÏ¢</a></li>
-            </ul>
-        </div>
-        <div class="adtip">
-            <div class="tip">
-                ¹«¸æ
-            </div>
-            <div class="adv">
-                <p>¹«Ë¾Í³Ò»¹«¸æÔÚÕâ±ßÕ¹Ê¾</p>
-                <span> x </span> </div>
-        </div>
-    </div>
-</div>
-<div class="footer"></div>
+	</div>
+	<div class="footer"></div>
 </body>
 </html>

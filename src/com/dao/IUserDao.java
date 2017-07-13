@@ -10,7 +10,7 @@ import com.model.Plan;
 
 public interface IUserDao {
 	// ≤È—Ø◊…—Ø
-	public ResultSet getMessage(int messageId);
+	public ResultSet getMessage();
 
 	// ∆∂¿ß…Í«Î
 	public boolean userApply(Apply apply);
@@ -25,5 +25,6 @@ public interface IUserDao {
 	public ResultSet getPlan(int userId);
 
 	public ResultSet getIdByName(String username);
+
 	
 }

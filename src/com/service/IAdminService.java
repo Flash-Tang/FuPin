@@ -44,7 +44,9 @@ public interface IAdminService {
 	public boolean adjustPlan(int userid, String item);
 	public Demand showMeasureNum();
 	public boolean adjustMeasureNum(String item);
-	public List<DemandAna> demandAnalyze();
 	public List<Place> distributeAnalyze();
+	public List<DemandAna> demandAnalyze();
+	public boolean addMeasureNum(int id);
+	public boolean cutMeasureNum(int id);
 	
 }

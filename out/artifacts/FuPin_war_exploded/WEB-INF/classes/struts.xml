@@ -7,7 +7,7 @@
 <struts>
     <package name="struts2" extends="struts-default">
         <action name="adminlogin" class="com.action.LoginAction" method="adminlogin">
-            <result name="login">admin/admin.jsp</result>
+            <result name="login" type="redirectAction">showAllMessage</result>
             <result name="input">adminlogin.html</result>
         </action>
         <action name="adminregister" class="com.action.LoginAction" method="adminregister">
@@ -15,7 +15,7 @@
             <result name="input">adminregister.html</result>
         </action>
         <action name="userlogin" class="com.action.LoginAction" method="userlogin">
-            <result name="login">user/user.jsp</result>
+            <result name="login" type="redirectAction">getMessage</result>
             <result name="input">userlogin.html</result>
         </action>
         <action name="userregister" class="com.action.LoginAction" method="userregister">
@@ -29,7 +29,7 @@
         </action>
         <action name="apply" class="com.action.ApplyAction" method="SubmitApply">
             <result name="input">/user/userapply.jsp</result>
-            <result name="success">/user/user.jsp</result>
+            <result name="success" type="redirectAction">getMessage</result>
         </action>
         <action name="budget" class="com.action.BudgetAction" method="showBudget">
             <result name="success">/admin/adminbudget.jsp</result>
@@ -74,7 +74,46 @@
         <action name="usertrack" class="com.action.UserAction" method="UserTrack">
             <result name="success">/user/usertrackinfo.jsp</result>
         </action>
+        <action name="sendFeedback" class="com.action.UserAction" method="sendFeedback">
+            <result name="success" type="redirectAction">getMessage</result>
+            <result name="input" >/user/userfeedback.jsp</result>
+        </action>
 
+        <action name="showAllFeedback" class="com.action.AdminAction" method="showAllFeedback">
+            <result name="success" >/admin/adminfeedback.jsp</result>
+        </action>
 
+        <action name="deleteUserFeed" class="com.action.AdminAction" method="deleteUserFeed">
+            <result name="success" type="redirectAction">showAllFeedback</result>
+            <result name="input" type="redirectAction">showAllFeedback</result>
+        </action>
+        <action name="showAllMessage" class="com.action.AdminAction" method="showAllMessage">
+            <result name="success" >/admin/adminmessage.jsp</result>
+        </action>
+
+        <action name="deleteMessage" class="com.action.AdminAction" method="deleteMessage">
+            <result name="success" type="redirectAction">showAllMessage</result>
+            <result name="input" type="redirectAction">showAllMessage</result>
+        </action>
+
+        <action name="sendMessage" class="com.action.AdminAction" method="sendMessage">
+            <result name="success" type="redirectAction">showAllMessage</result>
+            <result name="input">/admin/adminaddmessage.jsp</result>
+        </action>
+        <action name="getMessage" class="com.action.UserAction" method="getMessage">
+            <result name="success">/user/user.jsp</result>
+        </action>
+        <action name="PlaceAnalyze" class="com.action.AdminAction" method="PlaceAnalyze">
+            <result name="success">/admin/DataAnalyze.jsp</result>
+        </action>
+        <action name="DemandAnalyze" class="com.action.AdminAction" method="DemandAnalyze">
+            <result name="success">/admin/analyse.jsp</result>
+        </action>
+        <action name="DataAnalyze" class="com.action.AdminAction" method="DataAnalyze">
+            <result name="success">/admin/DataAnalyze.jsp</result>
+        </action>
+        <action name="dataAnalyze" class="com.action.AdminAction" method="DataAnalyze">
+            <result name="success">/data.jsp</result>
+        </action>
     </package>
 </struts>

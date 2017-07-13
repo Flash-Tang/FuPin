@@ -11,15 +11,16 @@
 </head>
 <body>
 <div class="header">
-    <div class="top"> <a href="<%=request.getContextPath()%>/admin/admin.jsp"><img class="logo" src="<%=request.getContextPath()%>/admin/images/logo.jpg" /></a>
-        <ul class="nav">
-            <li class="seleli"><a href="<%=request.getContextPath()%>/showAllApply.action">信息审核</a></li>
-            <li><a href="<%=request.getContextPath()%>/admin/adminbudget.jsp">预算管理</a></li>
-            <li><a href="<%=request.getContextPath()%>/admin/adminhelp.jsp">帮扶管理</a></li>
-            <li><a href="<%=request.getContextPath()%>/admin/adminfeedback.jsp">反馈管理</a></li>
-            <li><a href="<%=request.getContextPath()%>/index.html">返回首页</a></li>
-        </ul>
-    </div>
+	<div class="top"> <a href="<%=request.getContextPath()%>/showAllMessage.action"><img class="logo" src="<%=request.getContextPath()%>/admin/images/logo.jpg" /></a>
+		<ul class="nav">
+			<li><a href="<%=request.getContextPath()%>/showAllApply.action"">信息审核</a></li>
+			<li><a href="<%=request.getContextPath()%>/budget.action">预算管理</a></li>
+			<li><a href="<%=request.getContextPath()%>/showAllPlan.action">帮扶管理</a></li>
+			<li><a href="<%=request.getContextPath()%>/DataAnalyze.action">数据分析</a></li>
+			<li><a href="<%=request.getContextPath()%>/showAllFeedback.action">反馈管理</a></li>
+			<li><a href="<%=request.getContextPath()%>/index.html">返回首页</a></li>
+		</ul>
+	</div>
 </div>
 <div class="container">
     <div class="leftbar">
@@ -50,13 +51,13 @@
             </ul>
         </div>
         
-       	<table border width="80%">
+       	<table border="2" align="center" bordercolor="#6666FF" width="80%">
 				<tr>
 					<th>
 						用户ID
 					</th>
 					<th>
-					    <td><s:property value="applys.userid" /></td>
+					    <td align="center"><s:property value="applys.userid" /></td>
 					</th>
 				</tr>
 				<tr>
@@ -64,7 +65,7 @@
 						用户姓名
 					</th>
 					<th>
-					    <td><s:property value="applys.name" /></td>
+					    <td align="center"><s:property value="applys.name" /></td>
 					</th>
 				</tr>
 				<tr>
@@ -72,7 +73,7 @@
 						性别
 					</th>
 					<th>
-					    <td><s:property value="applys.sex" /></td>
+					    <td align="center"><s:property value="applys.sex" /></td>
 					</th>
 				</tr>
 				<tr>
@@ -80,7 +81,7 @@
 						民族
 					</th>
 					<th>
-					    <td><s:property value="applys.nation" /></td>
+					    <td align="center"><s:property value="applys.nation" /></td>
 					</th>
 				</tr>
 				<tr>
@@ -88,7 +89,7 @@
 						联系方式
 					</th>
 					<th>
-					    <td><s:property value="applys.telephone" /></td>
+					    <td align="center"><s:property value="applys.telephone" /></td>
 					</th>
 				</tr>
 				<tr>
@@ -96,7 +97,7 @@
 						身份证号
 					</th>
 					<th>
-					    <td><s:property value="applys.idCardNum" /></td>
+					    <td align="center"><s:property value="applys.idCardNum" /></td>
 					</th>
 				</tr>
 				<tr>
@@ -104,7 +105,7 @@
 						户籍所在地
 					</th>
 					<th>
-					    <td><s:property value="applys.placeOfDemicile" /></td>
+					    <td align="center"><s:property value="applys.placeOfDemicile" /></td>
 					</th>
 				</tr>
 				<tr>
@@ -112,7 +113,7 @@
 						受教育程度
 					</th>
 					<th>
-					    <td><s:property value="applys.education" /></td>
+					    <td align="center"><s:property value="applys.education" /></td>
 					</th>
 				</tr>
 				<tr>
@@ -120,7 +121,7 @@
 						家庭住址
 					</th>
 					<th>
-					    <td><s:property value="applys.address" /></td>
+					    <td align="center"><s:property value="applys.address" /></td>
 					</th>
 				</tr>
 				<tr>
@@ -128,7 +129,7 @@
 						婚姻状况
 					</th>
 					<th>
-					    <td><s:property value="applys.marriage" /></td>
+					    <td align="center"><s:property value="applys.marriage" /></td>
 					</th>
 				</tr>
 				<tr>
@@ -136,7 +137,7 @@
 						家庭人数
 					</th>
 					<th>
-					    <td><s:property value="applys.famMemNum" /></td>
+					    <td align="center"><s:property value="applys.famMemNum" /></td>
 					</th>
 				</tr>
 				<tr>
@@ -144,7 +145,7 @@
 						残疾情况
 					</th>
 					<th>
-					    <td><s:property value="applys.disability" /></td>
+					    <td align="center"><s:property value="applys.disability" /></td>
 					</th>
 				</tr>
 				<tr>
@@ -152,7 +153,7 @@
 						残疾证号
 					</th>
 					<th>
-					    <td><s:property value="applys.disabCardNum" /></td>
+					    <td align="center"><s:property value="applys.disabCardNum" /></td>
 					</th>
 				</tr>
 				<tr>
@@ -160,7 +161,7 @@
 						家庭人均收入
 					</th>
 					<th>
-					    <td><s:property value="applys.perIncome" /></td>
+					    <td align="center"><s:property value="applys.perIncome" /></td>
 					</th>
 				</tr>
 				<tr>
@@ -168,7 +169,7 @@
 						社会保险
 					</th>
 					<th>
-					    <td><s:if test="demand.socialSecurity==1">
+					    <td align="center"><s:if test="demand.socialSecurity==1">
                                                             需要
                      </s:if> <s:if test="demand.socialSecurity==0">
                                                            不需要
@@ -180,7 +181,7 @@
 						社会救助福利补贴
 					</th>
 					<th>
-					    <td><s:if test="demand.socialAssistance==1">
+					    <td align="center"><s:if test="demand.socialAssistance==1">
                                                             需要
                      </s:if> <s:if test="demand.socialAssistance==0">
                                                            不需要
@@ -192,7 +193,7 @@
 						托养服务
 					</th>
 					<th>
-					    <td><s:if test="demand.fosterService==1">
+					    <td align="center"><s:if test="demand.fosterService==1">
                                                             需要
                      </s:if> <s:if test="demand.fosterService==0">
                                                            不需要
@@ -204,7 +205,7 @@
 						康复医疗
 					</th>
 					<th>
-					    <td><s:if test="demand.rehabilitation==1">
+					    <td align="center"><s:if test="demand.rehabilitation==1">
                                                             需要
                      </s:if> <s:if test="demand.rehabilitation==0">
                                                            不需要
@@ -216,7 +217,7 @@
 						无障碍改造
 					</th>
 					<th>
-					    <td><s:if test="demand.disabReconst==1">
+					    <td align="center"><s:if test="demand.disabReconst==1">
                                                             需要
                      </s:if> <s:if test="demand.disabReconst==0">
                                                            不需要
@@ -228,7 +229,7 @@
 						教育培训
 					</th>
 					<th>
-					    <td><s:if test="demand.education==1">
+					    <td align="center"><s:if test="demand.education==1">
                                                             需要
                      </s:if> <s:if test="demand.education==0">
                                                            不需要
@@ -240,7 +241,7 @@
 						就业
 					</th>
 					<th>
-					    <td><s:if test="demand.job==1">
+					    <td align="center"><s:if test="demand.job==1">
                                                             需要
                      </s:if> <s:if test="demand.job==0">
                                                            不需要
@@ -252,7 +253,7 @@
 						扶贫
 					</th>
 					<th>
-					    <td><s:if test="demand.privation==1">
+					    <td align="center"><s:if test="demand.privation==1">
                                                             需要
                      </s:if> <s:if test="demand.privation==0">
                                                            不需要
@@ -264,7 +265,7 @@
 						维权
 					</th>
 					<th>
-					    <td><s:if test="demand.legalRight==1">
+					    <td align="center"><s:if test="demand.legalRight==1">
                                                             需要
                      </s:if> <s:if test="demand.legalRight==0">
                                                            不需要
@@ -276,25 +277,22 @@
 						改善基本生活条件
 					</th>
 					<th>
-					    <td><s:if test="demand.improlivCondition==1">
+					    <td align="center"><s:if test="demand.improlivCondition==1">
                                                             需要
                      </s:if> <s:if test="demand.improlivCondition==0">
                                                            不需要
                      </s:if></td>
 					</th>
 				</tr>
-				
-				
-					<tr>
-				<th>
-		    <a href="passApply.action?userId=<s:property value="applys.userid" />"> 合格</a>
-				    </th>
-					 <th>
-		<td><a href="deleteApply.action?userId=<s:property value="applys.userid" />"> 不合格</a></td>
-					    </th>
-					</tr>
-					
-			</table>
+
+		</table>
+		<br><br>
+		<div style="font-size: 20px;text-align:center;font-family:microsoft yahei;font;font-style: inherit">
+			<a href="passApply.action?userId=<s:property value="applys.userid" />"> 合格</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="deleteApply.action?userId=<s:property value="applys.userid" />"> 不合格</a>
+		</div>
+
     </div>
 </div>
 <div class="footer"></div>

@@ -10,7 +10,7 @@ import com.model.Plan;
 
 public interface IUserService {
 	//²éÑ¯×ÉÑ¯
-	 public List<Message> getMessage(int messageId);
+	 public List<Message> getMessage();
 	 //Æ¶À§ÉêÇë
 	 public boolean userApply(Apply apply);
 	 //ÆÀ¼Û·´À¡

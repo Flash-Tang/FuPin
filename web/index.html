@@ -5,6 +5,7 @@
 <title>市级政策资讯-扶贫首页服务</title>
 <meta name="keywords" content="龙岩市级政策资讯,龙岩扶贫首页服务">
 <meta name="description" content="龙岩扶贫首页服务为您提供龙岩扶贫类市级政策资讯">
+<script type="text/javascript" src="babyzone.js"></script>
 <style type="text/css">
 body,td,th {
 	font-family: "微软雅黑";
@@ -15,6 +16,15 @@ body {
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
+#banner {position:relative; width:585px; height:352px; border:1px solid #666; overflow:hidden;}
+#banner_list img {border:0px;}
+#banner_bg {position:absolute; bottom:0;background-color:#000;height:30px;filter: Alpha(Opacity=30);opacity:0.3;z-index:1000;cursor:pointer; width:478px; }
+#banner_info{position:absolute; bottom:0; left:5px; line-height:30px;color:#fff;z-index:1001}
+#banner_text {position:absolute;width:120px;z-index:1002; right:3px; bottom:3px;}
+#banner ul {position:absolute;list-style-type:none;filter: Alpha(Opacity=75);opacity:0.75; border:1px solid #fff;z-index:1002;margin:0; padding:0; bottom:3px; right:5px;}
+#banner ul li { padding:0px 8px;float:left;display:block;color:#FFF;border:#fff 1px solid;background-color:#6f4f67;cursor:pointer}
+#banner ul li.on{ background-color:#900}
+#banner_list a{position:absolute;} <!-- 让四张图片都可以重叠在一起-->
 </style>
 <link href="css/new.css" rel="stylesheet" type="text/css">
 <link href="css/pu.css" rel="stylesheet" type="text/css">
@@ -184,6 +194,12 @@ function getTime(){
 	$(function(){	$("#weather_iframe").attr("src","http://i.tianqi.com/index.php?c=code&id=34&icon=1&num=3");
 	});
 </script>
+<script type="text/javascript" language="javascript">
+window.onload=function(){
+	//
+	babyzone.scroll(4,"banner_list","list","banner_info");
+}
+</script>
 </head>
 <body>
 
@@ -195,7 +211,7 @@ function getTime(){
         <div class="topLogin fr"><a href="userlogin.html" target="blank">用户登录</a>    <a href="adminlogin.html">管理员登录</a></div>
     </div>
 </div>
-<div class="banner"><img src="images/top.png" alt="" /></div>
+<div class="banner"><img src="image/top.png" alt="" /></div>
 <div class="middle">
 	<div class="menuInner">
         <div class="menuHover">
@@ -203,9 +219,9 @@ function getTime(){
                 <div class="menu fl"><a href="index.html"><div class="font">首页</div></a></div>
                 <div class="menu fl"><a href="message.html"><div class="font">信息公开</div></a></div>
                 <div class="menu fl"><a href="show.html"><div class="font">公示公告</div></a></div>
-                <div class="menu fl"><a href="help.html"><div class="font">帮扶计划</div></a></div>
-                <div class="menu fl"><a href="results.html"><div class="font">成果展示</div></a></div>
-                <div class="menu fl"><a href="data.html"><div class="font">数据分析</div></a></div>
+                <div class="menu fl"><a href="bangfu.html"><div class="font">帮扶计划</div></a></div>
+                <div class="menu fl"><a href="chengguo.html"><div class="font">成果展示</div></a></div>
+                <div class="menu fl"><a href="dataAnalyze.action"><div class="font">数据分析</div></a></div>
             </div>
            
       
@@ -220,14 +236,227 @@ function getTime(){
 	    
  <script src="js/piwik.js" type="text/javascript"></script><script src="js/piwik.js" type="text/javascript"></script>
  <script src="js/piwik.js" type="text/javascript"></script><script src="js/piwik.js" type="text/javascript"></script>		
-			<div class="mainbox-l" style="width:560px;height:500px;float:left;bacground:red;display: block;border:2px solid red;text-align: center;font-size:30px">
-				图片
+			<div class="mainbox-l">
+				<div id="banner">	
+				<div id="banner_bg"></div>  <!--标题背景-->
+				<a href="#" id="banner_info"></a> <!--标题-->
+    			<ul id="list"></ul>
+   				<div id="banner_list">
+       			 <a href="#" target="_blank"><img src="imgs/img1.png" title="习总书记下乡问候" alt="橡树小屋的blog" /></a>
+        		<a href="#" target="_blank"><img src="imgs/img2.jpg" title="深入乡下田间" alt="橡树小屋的blog" /></a>
+        		<a href="#" target="_blank"><img src="imgs/img3.jpg" title="看望贫困老人" alt="橡树小屋的blog" /></a>
+        		<a href="#" target="_blank"><img src="imgs/img4.jpg" title="与群众进行交谈" alt="橡树小屋的blog" /></a>
+				</div>
+				</div>
 				
 			</div>
-			<div class="mainbox-2" style="width:550px;height:500px;float:right;bacground:green;display: block;border:2px solid red;text-align: center;text-align: center;font-size:30px;margin-bottom:35px">
-				新闻
+			<div class="mainbox-2" style="float:right;border:1px solid gray;margin-bottom:5px">
+				
+                <div class="hotNavs" id="hotNavs">
+                    <div class="hotNav selected fl" id="hotNavCont11">扶贫动态</div>
+                    <div class="hotNav fl" id="hotNavCont22">焦点新闻</div>
+                    <div class="hotNav borNone fl" id="hotNavCont33">媒体动态</div>
+                    <div class="more"><a href="http://www.longyan.cn/fp/fphomepage/fphpresource/fpyw/fpdt/fpdtinfo/index.jsp?type=fpdt" id="moreId" target="blank">更多&gt;</a></div>
+                </div>
+                <div class="hotNavCont" id="hotNavCont1">
+		<div class="hotTitle">
+		<a href="http://www.longyan.cn/fp/fphomepage/fphpresource/fpyw/fpdt/fpdtsx/14319.jsp" target="_blank">            市脱贫办召开扶贫小额信贷业务会议 
+    </a>
+	</div>
+    <div class="hotCont"><a href="" target="_blank">            为推进新修订《四川省扶贫小额信贷资金管理办法》与原有政策的有效衔接，6月28日下午，由市脱贫办召开扶贫小额信贷业务会议。各县（市、区）、经开区脱贫办分管扶贫小... 
+    </a></div>
+	    <div class="hotLists">
+		<div class="hotList">
+	    <div class="time fr"><a href="" target="_blank">2017-07-07</a></div>
+	    <div class="font"><a href="" target="_blank">            郫县精准扶贫医疗叠加保险政策明起实施 
+    </a></div>
+	</div>
+		<div class="hotList">
+	    <div class="time fr"><a href="" target="_blank">2017-06-14</a></div>
+	    <div class="font"><a href="" target="_blank">            高新西区:新型经营主体 助推精准扶贫 
+    </a></div>
+	</div>
+		<div class="hotList">
+	    <div class="time fr"><a href="" target="_blank">2017-06-09</a></div>
+	    <div class="font"><a href="" target="_blank">            种养能人帮扶贫困户 
+    </a></div>
+	</div>
+		<div class="hotList">
+	    <div class="time fr"><a href="" target="_blank">2017-06-09</a></div>
+	    <div class="font"><a href="" target="_blank">            绵阳特色产业助力脱贫攻坚 
+    </a></div>
+	</div>
+		<div class="hotList">
+	    <div class="time fr"><a href="" target="_blank">2017-05-25</a></div>
+	    <div class="font"><a href="" target="_blank">            德阳市召开2017年脱贫攻坚工作推进会 
+    </a></div>
+	</div>
+		<div class="hotList">
+	    <div class="time fr"><a href="" target="_blank">2017-05-23</a></div>
+	    <div class="font"><a href="" target="_blank">            秦山县师福易地扶贫搬迁集中安置区竣工验收 
+    </a></div>
+	</div>
+	    </div>
+
+                </div>
 			</div>
+<div>
+	<div style="width:390px;height:380px;float:left;display: block;text-align: center;font-size:30px;margin-top:20px;margin-right:12px">
+	<div class="thirdWid fr" style="min-height: 374px;">
+                
 			
+ <script src="http://app.scity.cn/piwik/piwik.js" type="text/javascript"></script><script src="http://app.scity.cn/piwik/piwik.js" type="text/javascript"></script>
+ <div class="comTitle">
+	<div class="title fl" style="float:left">先进经验</div>
+	<div class="more"><a href="" target="_blank">更多&gt;</a></div>
+</div>
+<div class="socioCont">
+		<div class="styleList">
+	<div class="left fl">
+		 <a href="" target="_blank">
+		 <img bord="0" height="88" src="image/pic.jpg" width="146" /></a> 	
+	</div>
+	<div class="right fl">
+	    <div class="title"><a href="" target="_blank">            首创：蛟洋镇党委推动企业下... 
+        </a></div>
+	    <div class="cont"><a href="" target="_blank">             12月14日，蛟洋镇启动开展企业助力脱贫“手拉手”帮扶活动... 
+        </a></div>
+	</div>
+	 <div class="redList socioList">
+	    <ul>
+				<li>
+			<a href="" target="_blank">            新华保险龙岩中支举办“保险扶贫公益跑”活动 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            六位中国科学院院士到上杭，为精准脱贫工作助阵！ 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            北京专家“师带徒”，助力上杭县中医院人才队伍建设 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            上杭政企携手创领就业扶贫 
+    </a></li>
+				<li>
+			<a href="http://www.longyan.cn/fp/fphomepage/shfp/shfpInfo/13060.jsp" target="_blank">            武平县爱心人士资助贫困学子 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            龙岩民建会员捐助“精准扶贫 慈善光明行” 爱心公益项目 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            新罗区精准扶贫关爱贫困妇女健康慈善爱心项目胜利启动！ 
+    </a></li>
+			    </ul>
+	</div>
+	</div>
+    </div>       
+        </div>
+    </div>
+
+    <div style="width:390px;height:380px;float:left;bacground:red;margin-top:13px;margin-right:12px">
+    	<div class="thirdWid fr" style="min-height: 374px;">
+                
+			
+ <script src="http://app.scity.cn/piwik/piwik.js" type="text/javascript"></script><script src="http://app.scity.cn/piwik/piwik.js" type="text/javascript"></script>
+ <div class="comTitle">
+	<div class="title fl" style="float:left">社会扶贫</div>
+	<div class="more"><a href="" target="_blank">更多&gt;</a></div>
+</div>
+<div class="socioCont">
+		<div class="styleList">
+	<div class="left fl">
+		 <a href="" target="_blank">
+		 <img bord="0" height="88" src="image/pic.jpg" width="146" /></a> 	
+	</div>
+	<div class="right fl">
+	    <div class="title"><a href="" target="_blank">            首创：蛟洋镇党委推动企业下... 
+        </a></div>
+	    <div class="cont"><a href="" target="_blank">             12月14日，蛟洋镇启动开展企业助力脱贫“手拉手”帮扶活动... 
+        </a></div>
+	</div>
+	 <div class="redList socioList">
+	    <ul>
+				<li>
+			<a href="" target="_blank">            新华保险龙岩中支举办“保险扶贫公益跑”活动 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            六位中国科学院院士到上杭，为精准脱贫工作助阵！ 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            北京专家“师带徒”，助力上杭县中医院人才队伍建设 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            上杭政企携手创领就业扶贫 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            武平县爱心人士资助贫困学子 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            龙岩民建会员捐助“精准扶贫 慈善光明行” 爱心公益项目 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            新罗区精准扶贫关爱贫困妇女健康慈善爱心项目胜利启动！ 
+    </a></li>
+			    </ul>
+	</div>
+	</div>
+    </div>       
+        </div>
+    </div>
+
+    <div style="width:390px;height:380px;float:left;display: block;text-align: center;font-size:30px;margin-top:20px;margin-right:5px">
+	<div class="thirdWid fr" style="min-height: 374px;">
+                
+			
+ <script src="http://app.scity.cn/piwik/piwik.js" type="text/javascript"></script><script src="http://app.scity.cn/piwik/piwik.js" type="text/javascript"></script>
+ <div class="comTitle">
+	<div class="title fl" style="float:left">工作风采</div>
+	<div class="more"><a href="" target="_blank">更多&gt;</a></div>
+</div>
+<div class="socioCont">
+		<div class="styleList">
+	<div class="left fl">
+		 <a href="" target="_blank">
+		 <img bord="0" height="88" src="image/pic.jpg" width="146" /></a> 	
+	</div>
+	<div class="right fl">
+	    <div class="title"><a href="" target="_blank">            首创：蛟洋镇党委推动企业下... 
+        </a></div>
+	    <div class="cont"><a href="" target="_blank">             12月14日，蛟洋镇启动开展企业助力脱贫“手拉手”帮扶活动... 
+        </a></div>
+	</div>
+	 <div class="redList socioList">
+	    <ul>
+				<li>
+			<a href="" target="_blank">            新华保险龙岩中支举办“保险扶贫公益跑”活动 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            六位中国科学院院士到上杭，为精准脱贫工作助阵！ 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            北京专家“师带徒”，助力上杭县中医院人才队伍建设 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            上杭政企携手创领就业扶贫 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            武平县爱心人士资助贫困学子 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            龙岩民建会员捐助“精准扶贫 慈善光明行” 爱心公益项目 
+    </a></li>
+				<li>
+			<a href="" target="_blank">            新罗区精准扶贫关爱贫困妇女健康慈善爱心项目胜利启动！ 
+    </a></li>
+			    </ul>
+	</div>
+	</div>
+    </div>       
+        </div>
+    </div>
+
+
+</div>
+</div>
 <div class="bottom">
 	<div class="content">
     	<div class="left fl">
@@ -236,7 +465,7 @@ function getTime(){
 			<p>运行维护：第二小组&nbsp;&nbsp;&nbsp;&nbsp;联系我们：1454053442@qq.com</p>
             <p class="tipColor">推荐windows7操作系统以及与标准兼容的浏览器，最佳分辨率1440x900</p>
         </div>
-        <div class="right fr"><img src="images/bottom.png" width="182" height="100" alt="" /></div>
+        <div class="right fr" style="margin-right:56px"><img src="image/bottom.png" width="182" height="100" alt="" /></div>
     </div>
 </div>
 </body></html>

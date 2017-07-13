@@ -16,12 +16,13 @@
 </head>
 <body>
 <div class="header">
-    <div class="top"> <a href="<%=request.getContextPath()%>/admin/admin.jsp"><img class="logo" src="<%=request.getContextPath()%>/admin/images/logo.jpg" /></a>
+    <div class="top"> <a href="<%=request.getContextPath()%>/showAllMessage.action"><img class="logo" src="<%=request.getContextPath()%>/admin/images/logo.jpg" /></a>
         <ul class="nav">
-            <li><a href="<%=request.getContextPath()%>/admin/adminsearch.jsp">信息查询</a></li>
-            <li class="seleli"><a href="budget.action">预算管理</a></li>
-            <li><a href="<%=request.getContextPath()%>/admin/adminhelp.jsp">帮扶管理</a></li>
-            <li><a href="<%=request.getContextPath()%>/admin/adminfeedback.jsp">反馈管理</a></li>
+            <li><a href="<%=request.getContextPath()%>/showAllApply.action"">信息审核</a></li>
+            <li class="seleli"><a href="<%=request.getContextPath()%>/budget.action">预算管理</a></li>
+            <li><a href="<%=request.getContextPath()%>/showAllPlan.action">帮扶管理</a></li>
+            <li><a href="<%=request.getContextPath()%>/DataAnalyze.action">数据分析</a></li>
+            <li><a href="<%=request.getContextPath()%>/showAllFeedback.action">反馈管理</a></li>
             <li><a href="<%=request.getContextPath()%>/index.html">返回首页</a></li>
         </ul>
     </div>
@@ -54,35 +55,43 @@
                 <li><a href="#">预算管理</a></li>
             </ul>
         </div>
-        <form action="updatebudget.action" method="post">
-        <table border width="60">
-            <tr>
-                <th>ID</th>
-                <th>帮扶措施</th>
-                <th>花费</th>
-                <th>名额</th>
-            </tr>
-            <s:iterator value="budgetlist">
+        <div>
+
+            <table border="2" align="center" bordercolor="#6666FF" width="80%">
                 <tr>
-                    <td>
-                        <s:property value="measureId"/>
-                    </td>
-                    <td>
-                        <s:property value="measureName"/>
-                    </td>
-                    <td>
-                        <s:property value="cost"/>
-                    </td>
-                    <td>
-                        <input type="text" name="Number" value="<s:property value="number"/>">
-                    </td>
-                    <td>
-                    </td>
+                    <th>ID</th>
+                    <th>帮扶措施</th>
+                    <th>花费</th>
+                    <th>名额</th>
+                    <th>操作</th>
                 </tr>
-            </s:iterator>
-        </table>
-            <input type="submit" value="确认更改"/>
-        </form>
+                <s:iterator value="budgetlist">
+                    <tr>
+                        <td align="center">
+                            <s:property value="measureId"/>
+                        </td>
+                        <td align="center">
+                            <s:property value="measureName"/>
+                        </td>
+                        <td align="center">
+                            <s:property value="cost"/>
+                        </td align="center">
+
+                        <td align="center">
+                            <s:property value="number"/>
+                        </td align="center">
+                        <td align="center">
+                            <a href="updatebudget.action?ID=<s:property value="measureId"/>&act=add">增加名额</a>
+                            &nbsp &nbsp
+
+                            <a href="updatebudget.action?ID=<s:property value="measureId"/>&act=cut">减少名额</a>
+                        </td>
+
+                    </tr>
+                </s:iterator>
+
+            </table>
+        </div>
     </div>
 </div>
 <div class="footer"></div>

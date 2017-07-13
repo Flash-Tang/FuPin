@@ -15,8 +15,8 @@ public class UserDaoImpl implements IUserDao {
 	DBUtil db = new DBUtil();
 
 	@Override
-	public ResultSet getMessage(int messageId) {
-		String sql = "select * from message where massageid='" + messageId + "'";
+	public ResultSet getMessage() {
+		String sql = "select * from message ";
 		try {
 			rs = db.queryData(sql);
 		} catch (Exception e) {
@@ -24,7 +24,6 @@ public class UserDaoImpl implements IUserDao {
 		}
 		return rs;
 	}
-
 	@Override
 	public boolean userApply(Apply apply) {
 		String sql = "insert into basicInfo(userid,name,sex,nation,telephone,idCardNum,disabCardNum,disability,placeOfDemicile" +

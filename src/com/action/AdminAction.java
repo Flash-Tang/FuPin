@@ -2,23 +2,75 @@ package com.action;
 
 import java.util.List;
 
-import com.model.Apply;
-import com.model.Demand;
-import com.model.Plan;
+import com.model.*;
 import com.service.IAdminService;
 import com.service.IUserService;
 import com.serviceImpl.AdminServiceImpl;
 import com.serviceImpl.UserServiceImpl;
 
+
 public class AdminAction {
+	List<Place> placeList=null;
+	List<DemandAna> demandanaList=null;
 	    Apply applys;
 	    Demand demand;
 	    List<Apply> applyList=null;
 		IAdminService iAdminService=new AdminServiceImpl();
+		List<Feedback> feedbackList=null;
+        public String feedBackId;
 		Plan plan;
 		String userId;
-		String item;
-	public String getItem() {
+		public String item;
+    Message message;
+    List<Message> messageList=null;
+    public String massageId;
+	public List<Place> getPlaceList() {
+		return placeList;
+	}
+
+	public void setPlaceList(List<Place> placeList) {
+		this.placeList = placeList;
+	}
+
+	public List<DemandAna> getDemandanaList() {
+		return demandanaList;
+	}
+
+	public void setDemandanaList(List<DemandAna> demandanaList) {
+		this.demandanaList = demandanaList;
+	}
+    public Message getMessage() {
+        return message;
+    }
+
+    public void setMessage(Message message) {
+        this.message = message;
+    }
+
+    public List<Message> getMessageList() {
+        return messageList;
+    }
+
+    public void setMessageList(List<Message> messageList) {
+        this.messageList = messageList;
+    }
+    public String getFeedBackId() {
+        return feedBackId;
+    }
+
+    public void setFeedBackId(String feedBackId) {
+        this.feedBackId = feedBackId;
+    }
+
+    public List<Feedback> getFeedbackList() {
+        return feedbackList;
+    }
+
+    public void setFeedbackList(List<Feedback> feedbackList) {
+        this.feedbackList = feedbackList;
+    }
+
+    public String getItem() {
 		return item;
 	}
 
@@ -78,7 +130,9 @@ public class AdminAction {
 		public void setApplyList(List<Apply> applyList) {
 			this.applyList = applyList;
 		}
-		
+
+
+
 		public String showUserApply(){
 			System.out.println("showUserApply");
 			applys=iAdminService.showUserApply(Integer.parseInt(userId));
@@ -124,5 +178,41 @@ public class AdminAction {
 				return "success";
 			else return "error";
 		}
+
+    public String showAllFeedback(){
+        feedbackList=iAdminService.showAllFeedback();
+        return "success";
+    }
+    public String deleteUserFeed(){
+        if(iAdminService.deleteFeedback(Integer.parseInt(feedBackId)))
+            return "success";
+        else
+            return "input";
+    }
+    public String showAllMessage(){
+        messageList=iAdminService.showAllMessage();
+        return "success";
+    }
+
+    public String sendMessage(){
+        if(iAdminService.addMessage(message))
+            return "success";
+        else
+            return "input";
+    }
+
+    public String deleteMessage(){
+        if(iAdminService.deleteMessage(Integer.parseInt(massageId)))
+            return "success";
+        else
+            return "input";
+    }
+
+	public String DataAnalyze(){
+		placeList=iAdminService.distributeAnalyze();
+		demandanaList=iAdminService.demandAnalyze();
+		return "success";
+	}
+
 
 }

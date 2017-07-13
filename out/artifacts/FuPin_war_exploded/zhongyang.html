@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>市级政策资讯-扶贫首页服务</title>
+<meta name="keywords" content="龙岩市级政策资讯,龙岩扶贫首页服务">
+<meta name="description" content="龙岩扶贫首页服务为您提供龙岩扶贫类市级政策资讯">
+<style type="text/css">
+body,td,th {
+	font-family: "微软雅黑";
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+</style>
+<link href="css/new.css" rel="stylesheet" type="text/css">
+<link href="css/pu.css" rel="stylesheet" type="text/css">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/j1.8.2.js"></script>
+<link href="css/jzfp.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/min.css">
+<link rel="stylesheet" type="text/css" href="css/zx.css">
+<script type="text/javascript" src="/js/navTab.js"></script>
+<script type="text/javascript" src="js/min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var winWid = $(window).width();
+	if( winWid>1200 ){
+		var marL = ( winWid - 1900 ) / 2 ;
+		$(".banner").css("margin-left",marL + "px");
+	}
+	else {
+		$(".banner").css("margin-left","-" + 360 + "px");
+		$(".banner").css("width",1560 + "px");
+	}
+	
+	$(window).resize(function() {
+        var winWid = $(window).width();
+		if( winWid>1200 ){
+			var marL = ( winWid - 1900 ) / 2 ;
+			var plusW = ( 1900 - winWid ) / 2 ;
+			$(".banner").css("margin-left",marL + "px");
+			$(".banner").css("width",winWid + plusW + "px");
+		}
+		else {
+			$(".banner").css("margin-left","-" + 360 + "px");
+			$(".banner").css("width",1560 + "px");
+		}
+    });
+	
+})
+</script>
+<script type="text/javascript">
+
+$(function(){
+	navTab({
+		'btn':$('#menus').find('.menu'),
+		'con':'.menuCont'
+	});
+	/*$(".menuCont").hover(function(e) {
+		$(".menuCont").mouseleave(function(e) {
+			$(".menuCont").hide();
+   		});
+    });*/
+	$(".menuHover").mouseleave(function(e) {
+		$(".menuCont").hide();
+    });
+
+	hotTab({
+		'btn':$('#hotNavs').find('.hotNav'),
+		'con':'.hotNavCont'
+	});
+	$('#hotNavCont1').show();
+	$('#hotNavCont2').hide();
+	$('#hotNavCont3').hide();
+
+	$(".photoSlide").hover(function() {
+        $(".swiperPhotoBtn").show();
+    });
+	$(".photoSlide").mouseleave(function() {
+        $(".swiperPhotoBtn").hide();
+    });
+});
+
+$(document).ready(function(){
+
+	$('#hotNavCont11').click(function(){
+	    $("#moreId").attr("href","http://www.longyan.cn/fp/fphomepage/fphpresource/fpyw/fpdt/fpdtinfo/index.jsp?type=fpdt"); 
+	});
+	$('#hotNavCont22').click(function(){
+	    $("#moreId").attr("href","http://www.longyan.cn/fp/fphomepage/fphpresource/fpyw/jdxw/jdxwinfo/index.jsp?type=jdxw"); 
+	});
+	$('#hotNavCont33').click(function(){
+	    $("#moreId").attr("href","http://www.longyan.cn/fp/fphomepage/fphpresource/fpyw/mtbd/mtbdinfo/index.jsp?type=mtbd"); 
+	});
+	});
+</script>
+<script>
+var swiper1 = new Swiper('.swiper-top', {
+	pagination: '.swiper-pagination',
+	paginationClickable: true,
+	autoplay:3000,
+	autoplayDisableOnInteraction : false,
+	speed:800,
+	loop:true,
+});
+var swiper2 = new Swiper('.swiper-photo', {
+	paginationClickable: true,
+	nextButton: '.swiper-button-next',
+	prevButton: '.swiper-button-prev',
+	autoplay:4000,
+	autoplayDisableOnInteraction : false,
+	speed:800,
+	loop:true,
+});
+</script>
+<script type="text/javascript">
+onLoad();
+function getTime(){  
+        //获取系统日期  
+         var now =new Date();  
+         //月  
+         var month=now.getMonth()+1;  
+         //星期  
+         var week =now.getDay();  
+         var s ="";  
+         switch(week){  
+          case 0: s = "星期日";break;  
+          case 1: s = "星期一";break;  
+          case 2: s = "星期二";break;  
+          case 3: s = "星期三";break;  
+          case 4: s = "星期四";break;  
+          case 5: s = "星期五";break;  
+          case 6: s = "星期六";break;  
+        }  
+         //年  
+        var year=now.getYear()+1900;  
+         //日  
+        var day=now.getDate();  
+        //小时  
+        var hour=now.getHours();  
+        //分钟  
+        var minute=now.getMinutes();  
+        //秒  
+        var second=now.getSeconds();  
+          
+         if(day<10){  
+            day="0"+day;  
+        }  
+         if(hour<10){  
+            hour="0"+hour;  
+        }  
+         if(minute<10){  
+            minute="0"+minute;  
+        }  
+         if(second<10){  
+            second="0"+second;  
+        }  
+        return year+"年"+month+"月"+day+"日 "+"  "+hour+":"+minute+":"+second+"  "+s;  
+     }  
+      function onLoad(){  
+        var timeStr = getTime();  
+        $("#serverTime").attr("value",timeStr);  
+             setTimeout(onLoad,1000);  
+    }
+
+</script>
+<script type="text/javascript">
+	var app_path='/ly_portal';
+	$(function(){
+		if(.browser == true && .browser <= 9){
+			$("input").placeholder({force: true});//解决IE8,IE9的placeholde兼容性 
+		}
+	});
+</script>
+<script type="text/javascript">
+	/******piwik common统一埋点*******/
+    var pkSiteID = '350800'; 
+	var pkBaseURL = 'http://app.scity.cn/piwik/';
+	document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+	$(function(){	$("#weather_iframe").attr("src","http://i.tianqi.com/index.php?c=code&id=34&icon=1&num=3");
+	});
+</script>
+</head>
+<body>
+
+<div class="top">
+	<div class="topCont">
+    	<div class="fl" >
+    	<input id="serverTime" type="text" style="border:none;background:#fbfbfb;width:210px;" value="" disabled /> 
+    	</div>
+       <div class="topLogin fr"><a href="userlogin.html" target="blank">用户登录</a>    <a href="adminlogin.html">管理员登录</a></div>
+    </div>
+</div>
+<div class="banner"><img src="image/top.png" alt="" /></div>
+<div class="middle">
+	<div class="menuInner">
+        <div class="menuHover">
+            <div class="menus" id="menus">
+                <div class="menu fl"><a href="index.html"><div class="font">首页</div></a></div>
+                <div class="menu fl"><a href="message.html"><div class="font">信息公开</div></a></div>
+                <div class="menu fl"><a href="show.html"><div class="font">公示公告</div></a></div>
+                <div class="menu fl"><a href="bangfu.html"><div class="font">帮扶计划</div></a></div>
+                <div class="menu fl"><a href="chengguo.html"><div class="font">成果展示</div></a></div>
+                <div class="menu fl"><a href="dataAnalyze.action"><div class="font">数据分析</div></a></div>
+            </div>
+           
+      
+            
+            
+       
+        </div>
+    </div>
+</div>
+
+<div class="cms">
+	    
+ <script src="js/piwik.js" type="text/javascript"></script><script src="js/piwik.js" type="text/javascript"></script>
+ <script src="js/piwik.js" type="text/javascript"></script><script src="js/piwik.js" type="text/javascript"></script>
+
+			
+<div style="float:left">
+		<div class="mainbox-l-t" style="width:218px">
+				<div id="clMenu">
+					
+					<div class="ej_jc">
+							<h3 class=" ML10 ej_jc_ico1">信息公开</h3>
+						</div>
+					<div class="ej_l">
+						<ul>
+							<li><a href="message.html">资金使用情况</a>
+							</li>
+							<li><a href="message.html">扶贫动态</a>
+							</li>
+							<li><a href="message.html">媒体报道</a>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="ej_jc">
+							<h3 class=" ML10 ej_jc_ico2">公示公告</h3>
+						</div>
+					<div class="ej_l">
+						<ul>
+							<li><a href="show.html">评选须知</a>
+							</li>
+							<li><a href="show.html">评选名单</a>
+							</li>
+							<li><a href="shili.html">扶贫典型事例</a>
+							</li>
+							
+						</ul>
+					</div>
+					
+					<div class="ej_jc">
+							<h3 class=" ML10 ej_jc_ico3">帮扶计划</h3>
+						</div>
+					<div class="ej_l">
+						<ul>
+							<li><a href="bangfu.html">资金项目</a>
+							</li>
+							<li><a href="shengji.html">省级政策</a>
+							</li>
+							<li><a href="zhongyang.html">中央政策</a>
+							</li>
+						</ul>
+					</div>
+					<div class="ej_jc">
+							<h3 class=" ML10 ej_jc_ico4">数据分析</h3>
+						</div>
+					<div class="ej_l">
+						<ul>
+							<li><a href="data.html">贫困水平分析</a>
+							</li>
+							<li><a href="data.html">帮扶效果分析</a>
+							</li>
+							<li><a href="data.html">贫困原因分析</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+<div style="float:right">
+		<div class="article fr">	
+	    <div class="articleTop">当前位置：<a href="http://www.longyan.cn/ly_fphomepage">首页</a>&nbsp;&nbsp;>&nbsp;&nbsp;帮扶计划&nbsp;&nbsp;>&nbsp;&nbsp;中央政策</div>
+		<div class="articleTitle">关于印发《中央财政专项扶贫资金管理办法》的通知</div>
+		<div class="articleTime">发布时间：2017-05-22<span class="ml15">来源：</span></div>
+		<div class="articleFont">
+			<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; text-align: center; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">财农〔2017〕8号</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; text-align: justify; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">有关省、自治区、直辖市财政厅（局）、扶贫办、发展改革委、民（宗）委（厅、局）、农业厅（农垦管理部门）、林业厅（局），新疆生产建设兵团财务局、发展改革委、民宗局：</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　为贯彻落实《中共中央 国务院关于打赢脱贫攻坚战的决定》精神，进一步加强和规范中央财政专项扶贫资金使用与管理，促进提升资金使用效益，我们对《财政专项扶贫资金管理办法》（财农〔2011〕412号）进行了修订，制定了《中央财政专项扶贫资金管理办法》，现印发给你们，请遵照执行。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; text-align: justify; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　附件：中央财政专项扶贫资金管理办法</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; text-align: right; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　财政部 扶贫办 国家发展改革委</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; text-align: right; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　国家民委 农业部 林业局</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; text-align: right; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　2017年3月13日</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">附件：</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; text-align: center; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;"><strong>中央财政专项扶贫资金管理办法</strong></span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; text-align: center; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;"><strong>第一章 总&nbsp; 则</strong></span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第一条 为贯彻落实《中共中央 国务院关于打赢脱贫攻坚战的决定》（以下简称《决定》）和精准扶贫、精准脱贫基本方略，加强中央财政专项扶贫资金管理，提高资金使用效益，依据《中华人民共和国预算法》和国家有关扶贫开发方针政策等，制定本办法。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第二条 中央财政专项扶贫资金是中央财政通过一般公共预算安排的支持各省（自治区、直辖市，以下简称“各省”）以及新疆生产建设兵团（以下简称“新疆兵团”）主要用于精准扶贫、精准脱贫的资金。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; text-align: justify; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第三条 中央财政专项扶贫资金应当围绕脱贫攻坚的总体目标和要求，统筹整合使用，形成合力，发挥整体效益。中央财政专项扶贫资金的支出方向包括：扶贫发展、以工代赈、少数民族发展、“三西”农业建设、国有贫困农场扶贫、国有贫困林场扶贫。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; text-align: justify; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第四条 坚持资金使用精准，在精准识别贫困人口的基础上，把资金使用与建档立卡结果相衔接，与脱贫成效相挂钩，切实使资金惠及贫困人口。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; text-align: center; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　<strong>第二章&nbsp; 预算安排与资金分配</strong></span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第五条 中央财政依据脱贫攻坚任务需要和财力情况，在年度预算中安排财政专项扶贫资金。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　地方各级财政根据本地脱贫攻坚需要和财力情况，每年预算安排一定规模的财政专项扶贫资金，并切实加大投入规模，省级资金投入情况纳入中央财政专项扶贫资金绩效评价内容。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第六条 中央财政专项扶贫资金分配向西部地区（包括比照适用西部大开发政策的贫困地区）、贫困革命老区、贫困民族地区、贫困边疆地区和连片特困地区倾斜，使资金向脱贫攻坚主战场聚焦。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第七条 中央财政专项扶贫资金主要按照因素法进行分配。资金分配的因素主要包括贫困状况、政策任务和脱贫成效等。贫困状况主要考虑各省贫困人口规模及比例、贫困深度、农民人均纯收入、地方人均财力等反映贫困的客观指标，政策任务主要考虑国家扶贫开发政策、年度脱贫攻坚任务及贫困少数民族发展等工作任务。脱贫成效主要考虑扶贫开发工作成效考核结果、财政专项扶贫资金绩效评价结果、贫困县开展统筹整合使用财政涉农资金试点工作成效等。每年分配资金选择的因素和权重，可根据当年扶贫开发工作重点适当调整。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; text-align: center; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　<strong>第三章 资金支出范围与下达</strong></span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第八条 各省应按照国家扶贫开发政策要求，结合当地扶贫开发工作实际情况，围绕培育和壮大贫困地区特色产业、改善小型公益性生产生活设施条件、增强贫困人口自我发展能力和抵御风险能力等方面，因户施策、因地制宜确定中央财政专项扶贫资金使用范围。教育、科学、文化、卫生、医疗、社保等社会事业支出原则上从现有资金渠道安排。各地原通过中央财政专项扶贫资金用于上述社会事业事项（“雨露计划”中农村贫困家庭子女初中、高中毕业后接受中高等职业教育，对家庭给予扶贫助学补助的事项除外）的不再继续支出。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　开展统筹整合使用财政涉农资金试点的贫困县，由县级按照贫困县开展统筹整合使用财政涉农资金试点工作有关文件要求,根据脱贫攻坚需求统筹安排中央财政专项扶贫资金。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第九条 各省可根据扶贫资金项目管理工作需要，从中央财政专项扶贫资金中，按最高不超过1%的比例据实列支项目管理费，并由县级安排使用，不足部分由地方财政解决。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　项目管理费专门用于项目前期准备和实施、资金管理相关的经费开支。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第十条 中央财政专项扶贫资金（含项目管理费）不得用于下列各项支出：</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　（一）行政事业单位基本支出；</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　（二）交通工具及通讯设备；</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　（三）各种奖金、津贴和福利补助；</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　（四）弥补企业亏损；</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　（五）修建楼堂馆所及贫困农场、林场棚户改造以外的职工住宅；</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　（六）弥补预算支出缺口和偿还债务；</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　（七）大中型基本建设项目；</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　（八）城市基础设施建设和城市扶贫；</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　（九）其他与脱贫攻坚无关的支出。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第十一条 中央财政专项扶贫资金项目审批权限下放到县级。强化地方对中央财政专项扶贫资金的管理责任。各省要充分发挥中央财政专项扶贫资金的引导作用，以脱贫成效为导向，以脱贫攻坚规划为引领，统筹整合使用相关财政涉农资金，提高资金使用精准度和效益。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第十二条 各省要创新资金使用机制。探索推广政府和社会资本合作、政府购买服务、资产收益扶贫等机制，撬动更多金融资本、社会帮扶资金参与脱贫攻坚。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第十三条 财政部在国务院扶贫开发领导小组批准年度资金分配方案后，及时将中央财政专项扶贫资金预算下达各省财政厅（局），并抄送财政部驻当地财政监察专员办事处（以下简称“专员办”）。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　根据预算管理有关要求，财政部按当年预计执行数的一定比例，将下一年度中央财政专项扶贫资金预计数提前下达各省财政厅（局），并抄送当地专员办。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　安排新疆兵团的财政专项扶贫资金，按照新疆兵团预算管理有关规定管理。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第十四条 各地应当加快预算执行，提高资金使用效益。结转结余的中央财政专项扶贫资金，按照财政部关于结转结余资金管理的相关规定管理。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第十五条 中央财政专项扶贫资金的支付管理，按照财政国库管理有关规定执行。属于政府采购、招投标管理范围的，执行相关法律、法规及制度规定。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; text-align: center; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;"><strong>第四章 资金管理与监督&nbsp;</strong></span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第十六条 与中央财政专项扶贫资金使用管理相关的各部门根据以下职责分工履行中央财政专项扶贫资金使用管理职责。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　（一）扶贫办、发展改革委、国家民委、农业部、林业局等部门分别商财政部拟定中央财政专项扶贫资金各支出方向资金的分配方案。扶贫办商财政部汇总平衡提出统一分配方案，上报国务院扶贫开发领导小组审定。由国务院扶贫开发领导小组通知各省人民政府。财政部根据审定的分配方案下达资金。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　（二）各级财政部门负责预算安排和资金下达，加强资金监管。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　（三）各级扶贫、发展改革、民族、农业（农垦管理）、林业等部门负责资金和项目具体使用管理、绩效评价、监督检查等工作，按照权责对等原则落实监管责任。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　（四）安排新疆兵团的中央财政专项扶贫资金规模由财政部确定，新疆兵团财务、扶贫部门负责使用管理与监督检查。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第十七条 各地应当加强资金和项目管理，做到资金到项目、管理到项目、核算到项目、责任到项目，并落实绩效管理各项要求。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第十八条 全面推行公开公示制度。推进政务公开，资金政策文件、管理制度、资金分配结果等信息及时向社会公开，接受社会监督。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第十九条 中央财政专项扶贫资金使用管理实行绩效评价制度。绩效评价结果以适当形式公布，并作为中央财政专项扶贫资金分配的重要因素。绩效评价年度具体实施方案由财政部、扶贫办制定。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第二十条 各级财政、扶贫、发展改革、民族、农业（农垦管理）、林业等部门要配合审计、纪检监察、检察机关做好资金和项目的审计、检查等工作。各地专员办按照工作职责和财政部要求对中央财政专项扶贫资金进行全面监管，定期或不定期形成监管报告报送财政部，根据财政部计划安排开展监督检查。各级扶贫、发展改革、民族、农业（农垦管理）、林业等部门要配合专员办做好有关工作。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　创新监管方式，探索建立协同监管机制，逐步实现监管口径和政策尺度的一致，建立信息共享和成果互认机制，提高监管效率。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第二十一条 各级财政、扶贫、发展改革、民族、农业（农垦管理）和林业等部门及其工作人员在中央财政专项扶贫资金分配、使用管理等工作中，存在违反本办法规定，以及滥用职权、玩忽职守、徇私舞弊等违法违纪行为的，按照《中华人民共和国预算法》、《公务员法》、《行政监察法》、《财政违法行为处罚处分条例》等国家有关规定追究相应责任；涉嫌犯罪的，移送司法机关处理。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; text-align: center; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;"><strong>第五章 附则</strong></span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第二十二条 各省根据本办法，结合本省的实际情况制定具体实施办法，报送财政部、扶贫办备案，并抄送财政部驻本省专员办。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第二十三条 本办法自2017年3月31日起施行。《财政部 发展改革委&nbsp; 国务院扶贫办关于印发&lt;财政专项扶贫资金管理办法&gt;的通知》（财农〔2011〕412号）同时废止。《财政部 国家民委关于印发&lt;少数民族发展资金管理办法&gt;的通知》（财农〔2006〕18号）、《财政部 农业部关于印发&lt;国有贫困农场财政扶贫资金管理暂行办法&gt;的通知》（财农〔2007〕347号）、《财政部 国家林业局关于印发&lt;国有贫困林场扶贫资金管理办法&gt;的通知》（财农〔2005〕104号）、《财政部 国务院扶贫办关于印发&lt;“三西”农业建设专项补助资金使用管理办法（修订稿）&gt;的通知》（财农〔2006〕356号）中有关规定与本办法不符的，执行本办法。</span></p>
+<p style="margin: 5px auto; color: rgb(61, 61, 61); font-family: 微软雅黑, Arial; font-size: 15px; line-height: 2em;">
+	<span style="font-family: 宋体, SimSun; font-size: 16px;">　　第二十四条 本办法由财政部会同扶贫办负责解释。</span></p>
+
+		</div>
+		<div class="articleFont">
+								</div>	
+		<div style="clear:both"></div>
+	</div>
+</div>
+
+</div>
+<div class="bottom">
+	<div class="content">
+    	<div class="left fl">
+        	<p>主办：某某市人民政府</p>
+			<p>承办：某某市脱贫攻坚战役指挥部办公室 某某市数字办公室</p>       
+			<p>运行维护：第二小组&nbsp;&nbsp;&nbsp;&nbsp;联系我们：1454053442@qq.com</p>
+            <p class="tipColor">推荐windows7操作系统以及与标准兼容的浏览器，最佳分辨率1440x900</p>
+        </div>
+        <div class="right fr"><img src="image/bottom.png" width="182" height="100" alt="" /></div>
+    </div>
+</div>
+</body></html>

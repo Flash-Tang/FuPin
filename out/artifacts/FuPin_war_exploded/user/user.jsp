@@ -1,27 +1,22 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: panxi
-  Date: 2017/7/10
-  Time: 17:07
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=gbk" language="java" %>
+<%@ page contentType="text/html;charset=utf-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ page import="java.sql.*"%>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
-    <meta name="description" content="¾«×¼·öÆ¶ÐÅÏ¢»¯¹ÜÀíÆ½Ì¨" />
-    <title>¾«×¼·öÆ¶ÐÅÏ¢»¯¹ÜÀíÆ½Ì¨</title>
+    <meta name="description" content="ç²¾å‡†æ‰¶è´«ä¿¡æ¯åŒ–ç®¡ç†å¹³å°" />
+    <title>ç²¾å‡†æ‰¶è´«ä¿¡æ¯åŒ–ç®¡ç†å¹³å°</title>
     <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/user/css/css.css" />
 </head>
 <body>
 <div class="header">
-    <div class="top"> <a href="<%=request.getContextPath()%>/user/user.jsp"><img class="logo" src="<%=request.getContextPath()%>/user/images/logo.jpg" /></a>
+    <div class="top"> <a href="<%=request.getContextPath()%>/getMessage.action"><img class="logo" src="<%=request.getContextPath()%>/user/images/logo.jpg" /></a>
         <ul class="nav">
-            <li><a href="<%=request.getContextPath()%>/user/userinfo.jsp">¸öÈËÐÅÏ¢</a></li>
-            <li><a href="<%=request.getContextPath()%>/user/userapply.jsp">ÉêÇë°ï·ö</a></li>
-            <li><a href="<%=request.getContextPath()%>/user/usertrack.jsp">°ï·ö×·×Ù</a></li>
-            <li><a href="<%=request.getContextPath()%>/user/userfeedback.jsp">·´À¡ÐÅÏ¢</a></li>
-            <li><a href="<%=request.getContextPath()%>/index.html">·µ»ØÊ×Ò³</a></li>
+            <li><a href="<%=request.getContextPath()%>/user/userapply.jsp">ç”³è¯·å¸®æ‰¶</a></li>
+            <li><a href="<%=request.getContextPath()%>/user/usertrack.jsp">å¸®æ‰¶è¿½è¸ª</a></li>
+            <li><a href="<%=request.getContextPath()%>/user/userfeedback.jsp">åé¦ˆä¿¡æ¯</a></li>
+            <li><a href="<%=request.getContextPath()%>/index.html">è¿”å›žé¦–é¡µ</a></li>
         </ul>
     </div>
 </div>
@@ -29,19 +24,19 @@
     <div class="leftbar">
         <div class="lm01"> <img class="peptx" src="<%=request.getContextPath()%>/user/images/user.png" />
             <div class="pepdet">
-                <p class="pepname">»¶Ó­»ØÀ´£¬ÆÕÍ¨ÓÃ»§</p>
+                <p class="pepname">æ¬¢è¿Žå›žæ¥ï¼Œæ™®é€šç”¨æˆ·</p>
             </div>
             <div class="clear"></div>
         </div>
         <div class="lm02">
             <div class="title"><img class="icon" src="<%=request.getContextPath()%>/user/images/dataicon.jpg" />
-                <h2>ÈÕÀú</h2>
+                <h2>æ—¥åŽ†</h2>
             </div>
             <div class="detail"> <img class="" src="<%=request.getContextPath()%>/user/images/kj_01.jpg" /> </div>
         </div>
         <div class="lm03">
             <div class="title"><img style="padding-right:5px;" class="icon" src="<%=request.getContextPath()%>/user/images/weaicon.jpg" />
-                <h2>ÌìÆø</h2>
+                <h2>å¤©æ°”</h2>
             </div>
             <div class="detail"> <img class="" src="<%=request.getContextPath()%>/user/images/kj_02.jpg" /> </div>
         </div>
@@ -49,17 +44,25 @@
     <div class="mainbody">
         <div class="currmenu">
             <ul class="rig_nav">
-                <li class="rig_seleli"><a href="#">µ±Ç°</a><span> x </span></li>
+                <li class="rig_seleli"><a href="#">å½“å‰</a><span> x </span></li>
             </ul>
         </div>
-        <div class="adtip">
-            <div class="tip">
-                ¹«¸æ
-            </div>
-            <div class="adv">
-                <p>¹«Ë¾Í³Ò»¹«¸æÔÚÕâ±ßÕ¹Ê¾</p>
-                <span> x </span> </div>
-        </div>
+        <table border="2" align="center" bordercolor="#6666FF" width="80%">
+            <tr>
+                <th>
+                    é€šçŸ¥ç¼–å·
+                </th>
+                <th>
+                    é€šçŸ¥å†…å®¹
+                </th>
+            </tr>
+            <s:iterator value="messageList">
+                <tr>
+                    <td align="center"><s:property value="massageid" /></td>
+                    <td align="center"><s:property value="text" /></td>
+                </tr>
+            </s:iterator>
+        </table>
     </div>
 </div>
 <div class="footer"></div>

@@ -353,6 +353,19 @@ public class AdminServiceImpl implements IAdminService {
 	public boolean adjustMeasureNum(String item) {
 		return iAdminDao.adjustMeasureNum(item);
 	}
+
+
+
+	@Override
+	public boolean addMeasureNum(int id) {
+		return iAdminDao.addMeasureNum(id);
+	}
+
+	@Override
+	public boolean cutMeasureNum(int id) {
+		return iAdminDao.cutMeasureNum(id);
+	}
+
 	@Override
 	public List<Place> distributeAnalyze() {
 		ResultSet rs=iAdminDao.distributeAnalyze();
@@ -360,16 +373,13 @@ public class AdminServiceImpl implements IAdminService {
 		try {
 			while(rs.next())
 			{
-				//取数据库表中的每一行值
 				String placeOfDemicile=rs.getString("placeOfDemicile");
 				String poorNum=rs.getString("poorNum");
 				String avgIncome=rs.getString("avgIncome");
-				//将每一行值放入javaBeaN中
 				Place place=new Place();
 				place.setPlaceOfDemicile(placeOfDemicile);
 				place.setPoorNum(poorNum);
 				place.setAvgIncome(avgIncome);
-				//将获取的javaBean对象放入集合中
 				placeList.add(place);
 			}
 		} catch (Exception e) {
@@ -385,7 +395,6 @@ public class AdminServiceImpl implements IAdminService {
 		try {
 			while(rs.next())
 			{
-				//取数据库表中的每一行值
 				int socialSecurity=rs.getInt("socialSecurity");
 				int socialAssistance=rs.getInt("socialAssistance");
 				int fosterService=rs.getInt("fosterService");
@@ -396,7 +405,6 @@ public class AdminServiceImpl implements IAdminService {
 				int privation=rs.getInt("privation");
 				int legalRight=rs.getInt("legalRight");
 				int improlivCondition=rs.getInt("improlivCondition");
-				//将获取的javaBean对象放入集合中
 				DemandAna demandAna=new DemandAna();
 				demandAna.setSocialSecurity(socialSecurity);
 				demandAna.setSocialAssistance(socialAssistance);
@@ -408,11 +416,11 @@ public class AdminServiceImpl implements IAdminService {
 				demandAna.setPrivation(privation);
 				demandAna.setLegalRight(legalRight);
 				demandAna.setImprolivCondition(improlivCondition);
+				demandAnaList.add(demandAna);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return demandAnaList;
 	}
-
 }

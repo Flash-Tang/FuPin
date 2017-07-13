@@ -15,9 +15,8 @@
 </head>
 <body>
 <div class="header">
-    <div class="top"><a href="<%=request.getContextPath()%>/user/user.jsp"><img class="logo" src="<%=request.getContextPath()%>/user/images/logo.jpg" /></a>
+    <div class="top"><a href="<%=request.getContextPath()%>/getMessage.action"><img class="logo" src="<%=request.getContextPath()%>/user/images/logo.jpg" /></a>
         <ul class="nav">
-            <li><a href="<%=request.getContextPath()%>/user/userinfo.jsp">个人信息</a></li>
             <li><a href="<%=request.getContextPath()%>/user/userapply.jsp">申请帮扶</a></li>
             <li class="seleli"><a href="<%=request.getContextPath()%>/user/usertrack.jsp">帮扶追踪</a></li>
             <li><a href="<%=request.getContextPath()%>/user/userfeedback.jsp">反馈信息</a></li>
@@ -53,9 +52,14 @@
                 <li><a href="#">帮扶追踪</a></li>
             </ul>
         </div>
+        <br><br><br><br>
+        <div style="font-size:18px; text-align:center">请填写您的用户名:</div>
+        <br>
         <form action="usertrack.action" method="post">
-            <input type="text" name="user.username"/>
-            <input type="submit"/>
+            <div border="2" align="center" bordercolor="#6666FF">
+                <input type="text" name="user.username"/>
+                <input type="submit"/>
+            </div>
         </form>
     </div>
 </div>

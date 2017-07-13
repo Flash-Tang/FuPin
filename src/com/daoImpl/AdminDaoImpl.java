@@ -286,26 +286,55 @@ public class AdminDaoImpl implements IAdminDao {
         }
         return false;
 	}
-    @Override
-    public ResultSet distributeAnalyze() {
-        String sql = "select placeOfDemicile,count(*) as poorNum, AVG(perIncome) as avgIncome from basicinfo group by placeOfDemicile order by AVG(perIncome)";
-        try {
-            rs = db.queryData(sql);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return rs;
-    }
 
-    @Override
-    public ResultSet demandAnalyze() {
-        String sql = "select placeOfDemicile,count(socialSecurity) as socialSecurity,count(socialAssistance) as socialAssistance,count(fosterService) as fosterService,count(rehabilitation) as rehabilitation,count(disabReconst) as disabReconst,count(education) as education,count(job) as job,count(privation) as privation,count(legalRight) as legalRight,count(improlivCondition) as improlivCondition from demand";
 
-        try {
-            rs = db.queryData(sql);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return rs;
-    }
+	@Override
+	public boolean addMeasureNum(int id) {
+		String sql = "update measure set number=number+1 where measureId = '"+ id +"'";
+		try {
+			if(db.Update(sql))
+				return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	@Override
+	public boolean cutMeasureNum(int id) {
+		String sql = "update measure set number=number-1 where measureId = '"+ id +"'";
+		try {
+			if(db.Update(sql))
+				return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+
+	@Override
+	public ResultSet distributeAnalyze() {
+		String sql = "select placeOfDemicile,count(*) as poorNum, AVG(perIncome) as avgIncome from basicinfo group by placeOfDemicile order by AVG(perIncome)";
+		try {
+			rs = db.queryData(sql);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return rs;
+	}
+
+	@Override
+	public ResultSet demandAnalyze() {
+		String sql = "select sum(socialSecurity) as socialSecurity,sum(socialAssistance) as socialAssistance,sum(fosterService) as fosterService,sum(rehabilitation) as rehabilitation,sum(disabReconst) as disabReconst,sum(education) as education,sum(job) as job,sum(privation) as privation,sum(legalRight) as legalRight,sum(improlivCondition) as improlivCondition from demand";
+		System.out.println("demandAnalyze");
+		try {
+			rs = db.queryData(sql);
+			System.out.println("demandAnalyze DAO OVER");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return rs;
+	}
+
 }

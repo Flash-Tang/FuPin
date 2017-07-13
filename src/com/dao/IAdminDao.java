@@ -49,6 +49,8 @@ public interface IAdminDao {
 	public boolean adjustPlan(int usreid, String item);
 	public ResultSet showMeasureNum();
 	public boolean adjustMeasureNum(String item);
-	public ResultSet demandAnalyze();
 	public ResultSet distributeAnalyze();
+	public ResultSet demandAnalyze();
+	public boolean addMeasureNum(int id);
+	public boolean cutMeasureNum(int id);
 }

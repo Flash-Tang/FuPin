@@ -5,23 +5,27 @@
   Time: 16:20
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=gbk" language="java" %>
+<%@ page contentType="text/html;charset=utf-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ page import="java.sql.*"%>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
-    <meta name="description" content="精准扶贫信息化管理平台" />
-    <title>精准扶贫信息化管理平台</title>
-    <link type="text/css" rel="stylesheet" href="css/css.css" />
+    <meta name="description" content="绮惧噯鎵惰传淇℃伅鍖栫鐞嗗钩鍙�" />
+    <title>绮惧噯鎵惰传淇℃伅鍖栫鐞嗗钩鍙�</title>
+    <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/admin/css/css.css" />
 </head>
 <body>
 <div class="header">
-    <div class="top"> <a href="<%=request.getContextPath()%>/admin/admin.jsp"><img class="logo" src="<%=request.getContextPath()%>/admin/images/logo.jpg" /></a>
+    <div class="top"> <a href="<%=request.getContextPath()%>/showAllMessage.action"><img class="logo" src="<%=request.getContextPath()%>/admin/images/logo.jpg" /></a>
         <ul class="nav">
-            <li><a href="<%=request.getContextPath()%>/admin/adminsearch.jsp">信息查询</a></li>
-            <li><a href="budget.action">预算管理</a></li>
-            <li><a href="<%=request.getContextPath()%>/admin/adminhelp.jsp">帮扶管理</a></li>
-            <li class="seleli"><a href="<%=request.getContextPath()%>/admin/adminfeedback.jsp">反馈管理</a></li>
-            <li><a href="<%=request.getContextPath()%>/index.html">返回首页</a></li>
+            <li><a href="<%=request.getContextPath()%>/showAllApply.action"">淇℃伅瀹℃牳</a></li>
+            <li><a href="<%=request.getContextPath()%>/budget.action">棰勭畻绠＄悊</a></li>
+            <li><a href="<%=request.getContextPath()%>/showAllPlan.action">甯壎绠＄悊</a></li>
+            <li><a href="<%=request.getContextPath()%>/DataAnalyze.action">鏁版嵁鍒嗘瀽</a></li>
+            <li class="seleli"><a href="<%=request.getContextPath()%>/showAllFeedback.action">鍙嶉绠＄悊</a></li>
+            <li><a href="<%=request.getContextPath()%>/index.html">杩斿洖棣栭〉</a></li>
         </ul>
     </div>
 </div>
@@ -29,19 +33,19 @@
     <div class="leftbar">
         <div class="lm01"> <img class="peptx" src="<%=request.getContextPath()%>/admin/images/manager.png" />
             <div class="pepdet">
-                <p class="pepname">欢迎回来，管理员</p>
+                <p class="pepname">娆㈣繋鍥炴潵锛岀鐞嗗憳</p>
             </div>
             <div class="clear"></div>
         </div>
         <div class="lm02">
             <div class="title"><img class="icon" src="<%=request.getContextPath()%>/admin/images/dataicon.jpg" />
-                <h2>日历</h2>
+                <h2>鏃ュ巻</h2>
             </div>
             <div class="detail"> <img class="" src="<%=request.getContextPath()%>/admin/images/kj_01.jpg" /> </div>
         </div>
         <div class="lm03">
             <div class="title"><img style="padding-right:5px;" class="icon" src="<%=request.getContextPath()%>/admin/images/weaicon.jpg" />
-                <h2>天气</h2>
+                <h2>澶╂皵</h2>
             </div>
             <div class="detail"> <img class="" src="<%=request.getContextPath()%>/admin/images/kj_02.jpg" /> </div>
         </div>
@@ -49,18 +53,34 @@
     <div class="mainbody">
         <div class="currmenu">
             <ul class="rig_nav">
-                <li class="rig_seleli"><a href="#">当前</a><span> x </span></li>
-                <li><a href="#">反馈管理</a></li>
+                <li class="rig_seleli"><a href="#">褰撳墠</a><span> x </span></li>
+                <li><a href="#">鍙嶉绠＄悊</a></li>
             </ul>
         </div>
-        <div class="adtip">
-            <div class="tip">
-                公告
-            </div>
-            <div class="adv">
-                <p>公司统一公告在这边展示</p>
-                <span> x </span> </div>
-        </div>
+       	<table border="2" align="center" bordercolor="#6666FF" width="80%">
+				<tr>
+					<th>
+						鐢ㄦ埛ID
+					</th>
+					<th>
+						鐢ㄦ埛濮撳悕
+					</th>
+					<th>
+						鐢ㄦ埛璇勮
+					</th>
+					<th>
+						鎿嶄綔
+					</th>
+				</tr>
+          <s:iterator value="feedbackList">
+				<tr>
+					<td align="center"><s:property value="feedBackid" /></td>
+					<td align="center"><s:property value="userid" /></td>
+					<td align="center"><s:property value="words" /></td>
+					<td align="center"> <a href="deleteUserFeed.action?feedBackId=<s:property value="feedBackid" />"> 鍒犻櫎</a></td>
+				</tr>
+			</s:iterator>
+			</table>
     </div>
 </div>
 <div class="footer"></div>
